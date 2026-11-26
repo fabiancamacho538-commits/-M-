@@ -2,7 +2,7 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T17:44:09+00:00",
+  "generado": "2026-11-26T17:58:23+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
@@ -2528,7 +2528,29 @@
         "White Titanium"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C1.json",
-      "modelo_confirmado_por_appledb": "iPhone 16 Pro"
+      "modelo_confirmado_por_appledb": "iPhone 16 Pro",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_16_Pro/iPhone_16_Pro_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_16_Pro/iPhone_16_Pro_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_16_Pro/iPhone_16_Pro_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16-pro/iphone-16-pro-no-sim-desert-titanium.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-deserttitanium-select?scl=1&fmt=png-alpha",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          }
+        }
+      }
     },
     {
       "modelo": "iPhone 16 Pro Max",
