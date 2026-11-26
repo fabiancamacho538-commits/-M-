@@ -100,7 +100,12 @@ def resolver_modelo(nombre: str, catalogo: dict | None = None, vista: str = "tra
                 "resolucion": im["resolucion"]["texto"],
                 "resolucion_limitada": im["resolucion_limitada"],
                 "alto_maximo_en_video_px": im["alto_maximo_en_video_px"],
-                "color": e.get("color"), "perspectiva": im.get("perspectiva")}
+                "color": e.get("color"), "perspectiva": im.get("perspectiva"),
+                # animación 3D media vuelta (pantalla -> trasera), si existe para el modelo
+                "animacion_media_vuelta": ({k: v for k, v in e["animaciones"]["media_vuelta"].items()
+                                            if k in ("mov_prores4444_alfa", "webm_vp9_alfa", "preview_mp4",
+                                                     "resolucion", "fps", "duracion_s")}
+                                           if e.get("animaciones", {}).get("media_vuelta") else None)}
     motivo = "No está en la biblioteca."
     for nd in cat.get("no_disponibles", []):
         if nd.get("vista") == "modelo" and nombre.lower() in nd["modelo"].lower():

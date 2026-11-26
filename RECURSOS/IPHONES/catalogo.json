@@ -3410,22 +3410,22 @@
     {
       "modelo": "iPhone 16",
       "vista": "trasera",
-      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
     },
     {
       "modelo": "iPhone 16 Plus",
       "vista": "trasera",
-      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
     },
     {
       "modelo": "iPhone 16 Pro",
       "vista": "trasera",
-      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
     },
     {
       "modelo": "iPhone 16 Pro Max",
       "vista": "trasera",
-      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
     },
     {
       "modelo": "iPhone 16e",
@@ -3435,12 +3435,12 @@
     {
       "modelo": "iPhone 17",
       "vista": "trasera",
-      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
     },
     {
       "modelo": "iPhone Air",
       "vista": "trasera",
-      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
     },
     {
       "modelo": "iPhone 17e",

@@ -11,6 +11,10 @@ RECURSOS/
 │   ├── iPhone_11/
 │   │   ├── iPhone_11_trasera.png     # vista TRASERA (la que se usa por defecto)
 │   │   └── iPhone_11_frontal.png     # vista frontal con el fondo de pantalla oficial
+│   ├── iPhone_16_Pro_Max/            # los modelos con modelo 3D oficial suman la animación:
+│   │   ├── iPhone_16_Pro_Max_media_vuelta.mov          # 3D pantalla → trasera, ProRes 4444 con alfa
+│   │   ├── iPhone_16_Pro_Max_media_vuelta.webm         # lo mismo en VP9 con alfa (web/Remotion/HyperFrames)
+│   │   └── iPhone_16_Pro_Max_media_vuelta_preview.mp4  # vista previa sobre fondo oscuro
 │   ├── iPhone_11_Pro/ … iPhone_18_Pro_Max/   # una carpeta por modelo, mismo esquema
 │   ├── catalogo.json                 # fuente de verdad: modelo, rutas, resolución, URL, licencia
 │   └── _indice_visual.jpg            # hoja de contacto (trasera + frontal de cada modelo)
@@ -18,6 +22,8 @@ RECURSOS/
     ├── buscar_iphone.py         # detecta modelos de iPhone en un texto y devuelve su PNG
     ├── descargar_iphones.py     # frontales: descarga, verifica (AppleDB + Pillow), optimiza
     ├── traseras_iphones.py      # traseras: recorte de imágenes de la Apple Store o render 3D oficial
+    ├── animaciones_iphones.py   # animación 3D media vuelta (pantalla → trasera) con Blender
+    ├── anim_media_vuelta.py     # escena de Blender de la media vuelta (la usa el script anterior)
     ├── extraer_trasera.py       # separa la trasera de una composición oficial trasera+frente
     └── render_trasera_usdz.py   # render de la trasera desde el modelo 3D (USDZ) de Apple con Blender
 ```
@@ -47,7 +53,14 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
 3. **Nunca sustituir un modelo por otro.** Si `disponible` es `false` (p. ej. "iPhone 18" base,
    "iPhone 17 Plus"), no uses la imagen de un modelo parecido: resolvé ese momento con tipografía o un
    ícono genérico, y avisale al usuario qué modelo faltó y por qué (campo `motivo`).
-4. **No modificar los archivos de la biblioteca.** Trabajá sobre copias en la carpeta del proyecto de video.
+4. **Animación 3D de giro:** si la edición pide mostrar el teléfono girando (o una presentación del
+   modelo con movimiento), usá `animacion_media_vuelta` del buscador: la `.mov` (ProRes 4444 con alfa)
+   para Premiere/Final Cut/DaVinci/After Effects, o la `.webm` (VP9 con alfa) para HTML, Remotion o
+   HyperFrames. Dura 1,6 s (48 cuadros a 30 fps, 1080×1920): arranca con la pantalla y termina en la
+   trasera. Para que quede quieto al final, congelá el último cuadro; para ir de la trasera a la
+   pantalla, reproducila en reversa. Si el modelo no tiene animación, simulá el giro con las dos
+   imágenes (ver "Giro trasera → frontal" más abajo).
+5. **No modificar los archivos de la biblioteca.** Trabajá sobre copias en la carpeta del proyecto de video.
 
 ### Cómo usar las imágenes en motion graphics
 
@@ -81,8 +94,8 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
 Todo es material **© Apple Inc.** y **no es de licencia libre**:
 - Frontales: renders oficiales tomados del repositorio de AppleDB, sin cambios.
 - Traseras de iPhone 11 a 13, 17 Pro y 18 Pro: recortadas de las imágenes oficiales de la Apple Store.
-- Traseras de iPhone 14 a 17 y Air: renderizadas desde el modelo 3D oficial de Apple (AR Quick Look),
-  con el color calibrado contra la foto oficial.
+- Traseras de iPhone 14 a 17 y Air y las animaciones de media vuelta: renderizadas desde el modelo 3D
+  oficial de Apple (AR Quick Look), con el color calibrado contra la foto oficial.
 
 El uso previsto aceptable es nominativo o editorial (reseñas, comparativas, noticias, tutoriales), sin
 sugerir patrocinio de Apple. Si el video es **publicidad paga** con el iPhone como protagonista, avisale
@@ -104,5 +117,7 @@ El detalle por imagen está en el campo `licencia` de `catalogo.json`.
   `rembg`: `pip install "rembg[cpu]"`), optimizan sin pérdida y regeneran `catalogo.json` y
   `_indice_visual.jpg`. Necesitan acceso de red a `store.storeimages.cdn-apple.com`, `www.apple.com` y
   `raw.githubusercontent.com`.
-- Verificación sin descargar: `--solo-verificar` en cualquiera de los dos scripts.
+  3. Animación (si Apple publica el modelo 3D): agregá el modelo en `TRASERAS` como `"3d"` y corré
+     `BLENDER_PY=<python con bpy> python3 RECURSOS/_scripts/animaciones_iphones.py --modelos "<Modelo>"`.
+- Verificación sin descargar: `--solo-verificar` en los scripts de imágenes; `--solo-catalogo` en el de animaciones.
 - Después de agregar un modelo, revisá visualmente `_indice_visual.jpg` antes de dar el trabajo por terminado.
