@@ -2,7 +2,8 @@
 """
 Detecta menciones de modelos de iPhone en un texto (guion, transcripción,
 subtítulos, prompt) y devuelve la imagen correspondiente de la biblioteca
-RECURSOS/IPHONES según catalogo.json.
+RECURSOS/IPHONES según catalogo.json: por defecto la TRASERA
+(RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png); con --vista frontal, la frontal.
 
 Uso:
     python3 RECURSOS/_scripts/buscar_iphone.py "comparamos el iPhone quince Pro Max con el 16e"
@@ -79,26 +80,37 @@ def _nombre_canonico(numero: str | None, variante: str | None, solo: str | None)
     return f"iPhone {numero}{sufijo}"
 
 
-def resolver_modelo(nombre: str, catalogo: dict | None = None) -> dict:
-    """Devuelve la entrada del catálogo para un nombre canónico, o un aviso si no está."""
+def resolver_modelo(nombre: str, catalogo: dict | None = None, vista: str = "trasera") -> dict:
+    """Devuelve las imágenes de un modelo. vista: 'trasera' (por defecto) o 'frontal'.
+    Si la vista pedida no existe para ese modelo, devuelve la otra y lo indica."""
     cat = catalogo or _cargar()
-    for e in cat["imagenes"]:
-        if e["modelo"].lower() == nombre.lower():
-            return {"modelo": e["modelo"], "disponible": True, "ruta": e["ruta_local"],
-                    "resolucion": e["resolucion"]["texto"],
-                    "resolucion_limitada": e["resolucion_limitada"],
-                    "alto_maximo_en_video_px": e["alto_maximo_en_video_px"],
-                    "color": e["color"], "perspectiva": e["perspectiva"]}
+    for e in cat["modelos"]:
+        if e["modelo"].lower() != nombre.lower():
+            continue
+        imgs = e.get("imagenes", {})
+        elegida = vista if vista in imgs else next(iter(imgs), None)
+        if elegida is None:
+            break
+        im = imgs[elegida]
+        return {"modelo": e["modelo"], "disponible": True, "vista": elegida,
+                "vista_pedida_disponible": elegida == vista,
+                "ruta": im["ruta"],
+                "rutas": {v: imgs[v]["ruta"] for v in imgs},
+                "carpeta": e.get("carpeta"),
+                "resolucion": im["resolucion"]["texto"],
+                "resolucion_limitada": im["resolucion_limitada"],
+                "alto_maximo_en_video_px": im["alto_maximo_en_video_px"],
+                "color": e.get("color"), "perspectiva": im.get("perspectiva")}
     motivo = "No está en la biblioteca."
     for nd in cat.get("no_disponibles", []):
-        if nombre.lower() in nd["modelo"].lower():
+        if nd.get("vista") == "modelo" and nombre.lower() in nd["modelo"].lower():
             motivo = nd["motivo"]
             break
     return {"modelo": nombre, "disponible": False, "motivo": motivo,
             "accion": "No usar la imagen de otro modelo: resolver con tipografía/ícono genérico."}
 
 
-def buscar_menciones(texto: str, catalogo: dict | None = None) -> list[dict]:
+def buscar_menciones(texto: str, catalogo: dict | None = None, vista: str = "trasera") -> list[dict]:
     cat = catalogo or _cargar()
     norm = _normalizar(texto)
     salida = []
@@ -107,7 +119,7 @@ def buscar_menciones(texto: str, catalogo: dict | None = None) -> list[dict]:
         numero = g["n1"] or g["n2"] or g["n3"]
         variante = g["v1"] or g["v2"] or ("e" if (g["e1"] or g["n3"]) else None)
         nombre = _nombre_canonico(numero, variante, g["solo"])
-        res = resolver_modelo(nombre, cat)
+        res = resolver_modelo(nombre, cat, vista)
         res["mencion"] = m.group(0).strip()
         res["posicion"] = m.start()  # índice en el texto normalizado
         salida.append(res)
@@ -119,13 +131,15 @@ def main() -> int:
     ap.add_argument("texto", nargs="?", help="texto donde buscar menciones")
     ap.add_argument("--archivo", help="leer el texto desde un archivo (srt, txt, md...)")
     ap.add_argument("--modelo", help="resolver un único nombre de modelo")
+    ap.add_argument("--vista", choices=["trasera", "frontal"], default="trasera",
+                    help="trasera (por defecto) o frontal")
     args = ap.parse_args()
     if args.modelo:
-        hits = buscar_menciones(args.modelo) or [resolver_modelo(args.modelo)]
+        hits = buscar_menciones(args.modelo, vista=args.vista) or [resolver_modelo(args.modelo, vista=args.vista)]
         print(json.dumps(hits[0], ensure_ascii=False, indent=2))
         return 0 if hits[0]["disponible"] else 1
     texto = Path(args.archivo).read_text() if args.archivo else (args.texto or sys.stdin.read())
-    print(json.dumps(buscar_menciones(texto), ensure_ascii=False, indent=2))
+    print(json.dumps(buscar_menciones(texto, vista=args.vista), ensure_ascii=False, indent=2))
     return 0
 
 

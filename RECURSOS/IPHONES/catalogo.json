@@ -1,17 +1,66 @@
 {
   "biblioteca": "RECURSOS/IPHONES",
-  "descripcion": "Un render oficial por modelo de iPhone (11 → 18 Pro Max), PNG RGBA con transparencia real.",
-  "generado": "2026-11-26T16:11:34+00:00",
-  "script": "RECURSOS/_scripts/descargar_iphones.py",
-  "fuente_imagenes": {
-    "repositorio": "https://github.com/littlebyteorg/apple-device-images",
-    "commit": "b3082ba529681e25f3b465bcadf593460943687a"
+  "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
+  "vista_por_defecto": "trasera",
+  "generado": "2026-11-26T16:58:48+00:00",
+  "scripts": {
+    "frontales": "RECURSOS/_scripts/descargar_iphones.py",
+    "traseras": "RECURSOS/_scripts/traseras_iphones.py",
+    "busqueda": "RECURSOS/_scripts/buscar_iphone.py"
   },
-  "fuente_verificacion": "https://github.com/littlebyteorg/appledb",
-  "total": 32,
-  "imagenes": [
+  "total_modelos": 32,
+  "total_traseras": 0,
+  "total_frontales": 32,
+  "modelos": [
     {
       "modelo": "iPhone 11",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_11/iPhone_11_frontal.png",
+          "resolucion": {
+            "ancho": 979,
+            "alto": 1934,
+            "texto": "979x1934"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2224,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1683262,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Purple",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.87,
+            "pct_opaco": 98.08,
+            "pct_semitransparente": 0.05,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone12%2C1/Purple.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 11",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_11",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone12,1",
@@ -23,58 +72,66 @@
       ],
       "lanzamiento": "2019-09-20",
       "color": "Purple",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "(PRODUCT)RED",
         "Black",
         "Green",
+        "Purple",
         "White",
         "Yellow"
       ],
-      "archivo": "iPhone_11.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_11.png",
-      "resolucion": {
-        "ancho": 979,
-        "alto": 1934,
-        "texto": "979x1934"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 2224,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1683262,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.87,
-        "pct_opaco": 98.08,
-        "pct_semitransparente": 0.05,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone12%2C1/Purple.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone12%2C1.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 11",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 11"
     },
     {
       "modelo": "iPhone 11 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_11_Pro/iPhone_11_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 1295,
+            "alto": 2592,
+            "texto": "1295x2592"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2980,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2642002,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Midnight Green",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.04,
+            "pct_opaco": 97.83,
+            "pct_semitransparente": 0.13,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone12%2C3/Midnight%20Green.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 11 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_11_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone12,3",
@@ -86,56 +143,64 @@
       ],
       "lanzamiento": "2019-09-20",
       "color": "Midnight Green",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Gold",
+        "Midnight Green",
         "Silver",
         "Space Gray"
       ],
-      "archivo": "iPhone_11_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_11_Pro.png",
-      "resolucion": {
-        "ancho": 1295,
-        "alto": 2592,
-        "texto": "1295x2592"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 2980,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 2642002,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.04,
-        "pct_opaco": 97.83,
-        "pct_semitransparente": 0.13,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone12%2C3/Midnight%20Green.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone12%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 11 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 11 Pro"
     },
     {
       "modelo": "iPhone 11 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_11_Pro_Max/iPhone_11_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1413,
+            "alto": 2844,
+            "texto": "1413x2844"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3270,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2767529,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Midnight Green",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.75,
+            "pct_opaco": 98.21,
+            "pct_semitransparente": 0.04,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone12%2C5/Midnight%20Green.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 11 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_11_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone12,5",
@@ -147,56 +212,64 @@
       ],
       "lanzamiento": "2019-09-20",
       "color": "Midnight Green",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Gold",
+        "Midnight Green",
         "Silver",
         "Space Gray"
       ],
-      "archivo": "iPhone_11_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_11_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1413,
-        "alto": 2844,
-        "texto": "1413x2844"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3270,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 2767529,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.75,
-        "pct_opaco": 98.21,
-        "pct_semitransparente": 0.04,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone12%2C5/Midnight%20Green.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone12%2C5.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 11 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 11 Pro Max"
     },
     {
       "modelo": "iPhone 12 mini",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12_mini/iPhone_12_mini_frontal.png",
+          "resolucion": {
+            "ancho": 1220,
+            "alto": 2458,
+            "texto": "1220x2458"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2826,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2884008,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Blue",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.27,
+            "pct_opaco": 97.7,
+            "pct_semitransparente": 0.03,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C1/Blue.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 12 mini",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_12_mini",
       "variante": "mini",
       "variante_adicional": false,
       "identificador_apple": "iPhone13,1",
@@ -212,58 +285,66 @@
         "2021-04-30"
       ],
       "color": "Blue",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Purple",
         "(PRODUCT)RED",
         "Black",
+        "Blue",
         "Green",
         "White"
       ],
-      "archivo": "iPhone_12_mini.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_12_mini.png",
-      "resolucion": {
-        "ancho": 1220,
-        "alto": 2458,
-        "texto": "1220x2458"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 2826,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 2884008,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.27,
-        "pct_opaco": 97.7,
-        "pct_semitransparente": 0.03,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C1/Blue.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone13%2C1.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 12 mini",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 12 mini"
     },
     {
       "modelo": "iPhone 12",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12/iPhone_12_frontal.png",
+          "resolucion": {
+            "ancho": 1526,
+            "alto": 3087,
+            "texto": "1526x3087"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3550,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1201546,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Purple",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.28,
+            "pct_opaco": 97.53,
+            "pct_semitransparente": 0.2,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C2/Purple.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 12",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_12",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone13,2",
@@ -279,58 +360,66 @@
         "2021-04-30"
       ],
       "color": "Purple",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
+        "Purple",
         "(PRODUCT)RED",
         "Black",
         "Blue",
         "Green",
         "White"
       ],
-      "archivo": "iPhone_12.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_12.png",
-      "resolucion": {
-        "ancho": 1526,
-        "alto": 3087,
-        "texto": "1526x3087"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3550,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1201546,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.28,
-        "pct_opaco": 97.53,
-        "pct_semitransparente": 0.2,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C2/Purple.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone13%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 12",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 12"
     },
     {
       "modelo": "iPhone 12 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12_Pro/iPhone_12_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 1314,
+            "alto": 2658,
+            "texto": "1314x2658"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3056,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1090135,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Pacific Blue",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.25,
+            "pct_opaco": 97.72,
+            "pct_semitransparente": 0.03,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C3/Pacific%20Blue.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 12 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_12_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone13,3",
@@ -343,56 +432,64 @@
       ],
       "lanzamiento": "2020-10-23",
       "color": "Pacific Blue",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Gold",
         "Graphite",
+        "Pacific Blue",
         "Silver"
       ],
-      "archivo": "iPhone_12_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_12_Pro.png",
-      "resolucion": {
-        "ancho": 1314,
-        "alto": 2658,
-        "texto": "1314x2658"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3056,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1090135,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.25,
-        "pct_opaco": 97.72,
-        "pct_semitransparente": 0.03,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C3/Pacific%20Blue.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone13%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 12 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 12 Pro"
     },
     {
       "modelo": "iPhone 12 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1432,
+            "alto": 2902,
+            "texto": "1432x2902"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3337,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1164201,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Pacific Blue",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.14,
+            "pct_opaco": 97.84,
+            "pct_semitransparente": 0.02,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C4/Pacific%20Blue.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 12 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_12_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone13,4",
@@ -405,56 +502,64 @@
       ],
       "lanzamiento": "2020-11-13",
       "color": "Pacific Blue",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Gold",
         "Graphite",
+        "Pacific Blue",
         "Silver"
       ],
-      "archivo": "iPhone_12_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_12_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1432,
-        "alto": 2902,
-        "texto": "1432x2902"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3337,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1164201,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.14,
-        "pct_opaco": 97.84,
-        "pct_semitransparente": 0.02,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone13%2C4/Pacific%20Blue.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone13%2C4.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 12 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 12 Pro Max"
     },
     {
       "modelo": "iPhone 13 mini",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13_mini/iPhone_13_mini_frontal.png",
+          "resolucion": {
+            "ancho": 1223,
+            "alto": 2466,
+            "texto": "1223x2466"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2835,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4216259,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Pink",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.29,
+            "pct_opaco": 97.64,
+            "pct_semitransparente": 0.07,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C4/Pink.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 13 mini",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_13_mini",
       "variante": "mini",
       "variante_adicional": false,
       "identificador_apple": "iPhone14,4",
@@ -470,58 +575,66 @@
         "2022-03-18"
       ],
       "color": "Pink",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Green",
         "(PRODUCT)RED",
         "Blue",
         "Midnight",
+        "Pink",
         "Starlight"
       ],
-      "archivo": "iPhone_13_mini.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_13_mini.png",
-      "resolucion": {
-        "ancho": 1223,
-        "alto": 2466,
-        "texto": "1223x2466"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 2835,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 4216259,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.29,
-        "pct_opaco": 97.64,
-        "pct_semitransparente": 0.07,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C4/Pink.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C4.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 13 mini",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 13 mini"
     },
     {
       "modelo": "iPhone 13",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13/iPhone_13_frontal.png",
+          "resolucion": {
+            "ancho": 1314,
+            "alto": 2661,
+            "texto": "1314x2661"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3060,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4909583,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Pink",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.41,
+            "pct_opaco": 97.52,
+            "pct_semitransparente": 0.07,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C5/Pink.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 13",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_13",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone14,5",
@@ -537,58 +650,66 @@
         "2022-03-18"
       ],
       "color": "Pink",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Green",
         "(PRODUCT)RED",
         "Blue",
         "Midnight",
+        "Pink",
         "Starlight"
       ],
-      "archivo": "iPhone_13.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_13.png",
-      "resolucion": {
-        "ancho": 1314,
-        "alto": 2661,
-        "texto": "1314x2661"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3060,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 4909583,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.41,
-        "pct_opaco": 97.52,
-        "pct_semitransparente": 0.07,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C5/Pink.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C5.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 13",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 13"
     },
     {
       "modelo": "iPhone 13 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13_Pro/iPhone_13_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 1318,
+            "alto": 2661,
+            "texto": "1318x2661"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3060,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 3467866,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Sierra Blue",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.28,
+            "pct_opaco": 97.64,
+            "pct_semitransparente": 0.08,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C2/Sierra%20Blue.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 13 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_13_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone14,2",
@@ -604,57 +725,65 @@
         "2022-03-18"
       ],
       "color": "Sierra Blue",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Alpine Green",
         "Gold",
         "Graphite",
+        "Sierra Blue",
         "Silver"
       ],
-      "archivo": "iPhone_13_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_13_Pro.png",
-      "resolucion": {
-        "ancho": 1318,
-        "alto": 2661,
-        "texto": "1318x2661"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3060,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 3467866,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.28,
-        "pct_opaco": 97.64,
-        "pct_semitransparente": 0.08,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C2/Sierra%20Blue.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 13 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 13 Pro"
     },
     {
       "modelo": "iPhone 13 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1434,
+            "alto": 2909,
+            "texto": "1434x2909"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3345,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4200397,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Sierra Blue",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.16,
+            "pct_opaco": 97.78,
+            "pct_semitransparente": 0.06,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C3/Sierra%20Blue.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 13 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_13_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone14,3",
@@ -670,57 +799,65 @@
         "2022-03-18"
       ],
       "color": "Sierra Blue",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Alpine Green",
         "Gold",
         "Graphite",
+        "Sierra Blue",
         "Silver"
       ],
-      "archivo": "iPhone_13_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_13_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1434,
-        "alto": 2909,
-        "texto": "1434x2909"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3345,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 4200397,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.16,
-        "pct_opaco": 97.78,
-        "pct_semitransparente": 0.06,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C3/Sierra%20Blue.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 13 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 13 Pro Max"
     },
     {
       "modelo": "iPhone 14",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14/iPhone_14_frontal.png",
+          "resolucion": {
+            "ancho": 1313,
+            "alto": 2656,
+            "texto": "1313x2656"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3054,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1249374,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Purple",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.18,
+            "pct_opaco": 97.61,
+            "pct_semitransparente": 0.21,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C7/Purple.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 14",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_14",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone14,7",
@@ -736,58 +873,66 @@
         "2023-03-14"
       ],
       "color": "Purple",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Yellow",
         "(PRODUCT)RED",
         "Blue",
         "Midnight",
+        "Purple",
         "Starlight"
       ],
-      "archivo": "iPhone_14.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_14.png",
-      "resolucion": {
-        "ancho": 1313,
-        "alto": 2656,
-        "texto": "1313x2656"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3054,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1249374,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.18,
-        "pct_opaco": 97.61,
-        "pct_semitransparente": 0.21,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C7/Purple.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C7.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 14",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 14"
     },
     {
       "modelo": "iPhone 14 Plus",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14_Plus/iPhone_14_Plus_frontal.png",
+          "resolucion": {
+            "ancho": 1427,
+            "alto": 2903,
+            "texto": "1427x2903"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3338,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4983490,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Purple",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.11,
+            "pct_opaco": 97.68,
+            "pct_semitransparente": 0.22,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C8/Purple.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 14 Plus",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_14_Plus",
       "variante": "Plus",
       "variante_adicional": false,
       "identificador_apple": "iPhone14,8",
@@ -803,58 +948,66 @@
         "2023-03-14"
       ],
       "color": "Purple",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Yellow",
         "(PRODUCT)RED",
         "Blue",
         "Midnight",
+        "Purple",
         "Starlight"
       ],
-      "archivo": "iPhone_14_Plus.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_14_Plus.png",
-      "resolucion": {
-        "ancho": 1427,
-        "alto": 2903,
-        "texto": "1427x2903"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3338,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 4983490,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.11,
-        "pct_opaco": 97.68,
-        "pct_semitransparente": 0.22,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone14%2C8/Purple.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C8.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 14 Plus",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 14 Plus"
     },
     {
       "modelo": "iPhone 14 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14_Pro/iPhone_14_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 1312,
+            "alto": 2672,
+            "texto": "1312x2672"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3072,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1188690,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Deep Purple",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.38,
+            "pct_opaco": 97.4,
+            "pct_semitransparente": 0.22,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C2/Deep%20Purple.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 14 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_14_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone15,2",
@@ -867,56 +1020,64 @@
       ],
       "lanzamiento": "2022-09-16",
       "color": "Deep Purple",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
+        "Deep Purple",
         "Gold",
         "Silver",
         "Space Black"
       ],
-      "archivo": "iPhone_14_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_14_Pro.png",
-      "resolucion": {
-        "ancho": 1312,
-        "alto": 2672,
-        "texto": "1312x2672"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3072,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1188690,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.38,
-        "pct_opaco": 97.4,
-        "pct_semitransparente": 0.22,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C2/Deep%20Purple.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone15%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 14 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 14 Pro"
     },
     {
       "modelo": "iPhone 14 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14_Pro_Max/iPhone_14_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1422,
+            "alto": 2910,
+            "texto": "1422x2910"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3346,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1300522,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Deep Purple",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.17,
+            "pct_opaco": 97.62,
+            "pct_semitransparente": 0.21,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C3/Deep%20Purple.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 14 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_14_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone15,3",
@@ -929,56 +1090,64 @@
       ],
       "lanzamiento": "2022-09-16",
       "color": "Deep Purple",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
+        "Deep Purple",
         "Gold",
         "Silver",
         "Space Black"
       ],
-      "archivo": "iPhone_14_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_14_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1422,
-        "alto": 2910,
-        "texto": "1422x2910"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3346,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 1300522,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.17,
-        "pct_opaco": 97.62,
-        "pct_semitransparente": 0.21,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C3/Deep%20Purple.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone15%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 14 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 14 Pro Max"
     },
     {
       "modelo": "iPhone 15",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15/iPhone_15_frontal.png",
+          "resolucion": {
+            "ancho": 1316,
+            "alto": 2674,
+            "texto": "1316x2674"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3075,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4827734,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Pink",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.4,
+            "pct_opaco": 97.19,
+            "pct_semitransparente": 0.41,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C4/Pink.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 15",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_15",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone15,4",
@@ -990,57 +1159,65 @@
       ],
       "lanzamiento": "2023-09-22",
       "color": "Pink",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
         "Blue",
         "Green",
+        "Pink",
         "Yellow"
       ],
-      "archivo": "iPhone_15.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_15.png",
-      "resolucion": {
-        "ancho": 1316,
-        "alto": 2674,
-        "texto": "1316x2674"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3075,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 4827734,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.4,
-        "pct_opaco": 97.19,
-        "pct_semitransparente": 0.41,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C4/Pink.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone15%2C4.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 15",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 15"
     },
     {
       "modelo": "iPhone 15 Plus",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15_Plus/iPhone_15_Plus_frontal.png",
+          "resolucion": {
+            "ancho": 1426,
+            "alto": 2914,
+            "texto": "1426x2914"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3351,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 5594396,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Pink",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.18,
+            "pct_opaco": 97.56,
+            "pct_semitransparente": 0.26,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C5/Pink.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 15 Plus",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_15_Plus",
       "variante": "Plus",
       "variante_adicional": false,
       "identificador_apple": "iPhone15,5",
@@ -1052,57 +1229,65 @@
       ],
       "lanzamiento": "2023-09-22",
       "color": "Pink",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
         "Blue",
         "Green",
+        "Pink",
         "Yellow"
       ],
-      "archivo": "iPhone_15_Plus.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_15_Plus.png",
-      "resolucion": {
-        "ancho": 1426,
-        "alto": 2914,
-        "texto": "1426x2914"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3351,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 5594396,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.18,
-        "pct_opaco": 97.56,
-        "pct_semitransparente": 0.26,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone15%2C5/Pink.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone15%2C5.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 15 Plus",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 15 Plus"
     },
     {
       "modelo": "iPhone 15 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15_Pro/iPhone_15_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 1293,
+            "alto": 2656,
+            "texto": "1293x2656"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3054,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 6793322,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Natural Titanium",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.12,
+            "pct_opaco": 97.6,
+            "pct_semitransparente": 0.28,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone16%2C1/Natural%20Titanium.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 15 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_15_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone16,1",
@@ -1114,56 +1299,64 @@
       ],
       "lanzamiento": "2023-09-22",
       "color": "Natural Titanium",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black Titanium",
         "Blue Titanium",
+        "Natural Titanium",
         "White Titanium"
       ],
-      "archivo": "iPhone_15_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_15_Pro.png",
-      "resolucion": {
-        "ancho": 1293,
-        "alto": 2656,
-        "texto": "1293x2656"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3054,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 6793322,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.12,
-        "pct_opaco": 97.6,
-        "pct_semitransparente": 0.28,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone16%2C1/Natural%20Titanium.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone16%2C1.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 15 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 15 Pro"
     },
     {
       "modelo": "iPhone 15 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15_Pro_Max/iPhone_15_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1404,
+            "alto": 2896,
+            "texto": "1404x2896"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3330,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 7816012,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Natural Titanium",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.88,
+            "pct_opaco": 97.87,
+            "pct_semitransparente": 0.25,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone16%2C2/Natural%20Titanium.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 15 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_15_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone16,2",
@@ -1175,56 +1368,64 @@
       ],
       "lanzamiento": "2023-09-22",
       "color": "Natural Titanium",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black Titanium",
         "Blue Titanium",
+        "Natural Titanium",
         "White Titanium"
       ],
-      "archivo": "iPhone_15_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_15_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1404,
-        "alto": 2896,
-        "texto": "1404x2896"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3330,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 7816012,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.88,
-        "pct_opaco": 97.87,
-        "pct_semitransparente": 0.25,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone16%2C2/Natural%20Titanium.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone16%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 15 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 15 Pro Max"
     },
     {
       "modelo": "iPhone 16",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16/iPhone_16_frontal.png",
+          "resolucion": {
+            "ancho": 776,
+            "alto": 1582,
+            "texto": "776x1582"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 1819,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 551481,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Ultramarine",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.97,
+            "pct_opaco": 97.06,
+            "pct_semitransparente": 0.98,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C3/Ultramarine.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 16",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_16",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone17,3",
@@ -1236,57 +1437,65 @@
       ],
       "lanzamiento": "2024-09-20",
       "color": "Ultramarine",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
         "Pink",
         "Teal",
+        "Ultramarine",
         "White"
       ],
-      "archivo": "iPhone_16.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_16.png",
-      "resolucion": {
-        "ancho": 776,
-        "alto": 1582,
-        "texto": "776x1582"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 1819,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 551481,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.97,
-        "pct_opaco": 97.06,
-        "pct_semitransparente": 0.98,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C3/Ultramarine.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 16",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 16"
     },
     {
       "modelo": "iPhone 16 Plus",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16_Plus/iPhone_16_Plus_frontal.png",
+          "resolucion": {
+            "ancho": 1424,
+            "alto": 2914,
+            "texto": "1424x2914"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3351,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 5378029,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Ultramarine",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.94,
+            "pct_opaco": 97.84,
+            "pct_semitransparente": 0.21,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C4/Ultramarine.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 16 Plus",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_16_Plus",
       "variante": "Plus",
       "variante_adicional": false,
       "identificador_apple": "iPhone17,4",
@@ -1298,57 +1507,65 @@
       ],
       "lanzamiento": "2024-09-20",
       "color": "Ultramarine",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
         "Pink",
         "Teal",
+        "Ultramarine",
         "White"
       ],
-      "archivo": "iPhone_16_Plus.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_16_Plus.png",
-      "resolucion": {
-        "ancho": 1424,
-        "alto": 2914,
-        "texto": "1424x2914"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3351,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 5378029,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.94,
-        "pct_opaco": 97.84,
-        "pct_semitransparente": 0.21,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C4/Ultramarine.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C4.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 16 Plus",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 16 Plus"
     },
     {
       "modelo": "iPhone 16 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16_Pro/iPhone_16_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 762,
+            "alto": 1574,
+            "texto": "762x1574"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 1810,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 368600,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Desert Titanium",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.67,
+            "pct_opaco": 96.37,
+            "pct_semitransparente": 0.96,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C1/Desert%20Titanium.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 16 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_16_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone17,1",
@@ -1360,56 +1577,64 @@
       ],
       "lanzamiento": "2024-09-20",
       "color": "Desert Titanium",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black Titanium",
+        "Desert Titanium",
         "Natural Titanium",
         "White Titanium"
       ],
-      "archivo": "iPhone_16_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_16_Pro.png",
-      "resolucion": {
-        "ancho": 762,
-        "alto": 1574,
-        "texto": "762x1574"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 1810,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 368600,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.67,
-        "pct_opaco": 96.37,
-        "pct_semitransparente": 0.96,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C1/Desert%20Titanium.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C1.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 16 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 16 Pro"
     },
     {
       "modelo": "iPhone 16 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16_Pro_Max/iPhone_16_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1424,
+            "alto": 2956,
+            "texto": "1424x2956"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3399,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 3932843,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Desert Titanium",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.1,
+            "pct_opaco": 97.69,
+            "pct_semitransparente": 0.21,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C2/Desert%20Titanium.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 16 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_16_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone17,2",
@@ -1421,56 +1646,64 @@
       ],
       "lanzamiento": "2024-09-20",
       "color": "Desert Titanium",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black Titanium",
+        "Desert Titanium",
         "Natural Titanium",
         "White Titanium"
       ],
-      "archivo": "iPhone_16_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_16_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1424,
-        "alto": 2956,
-        "texto": "1424x2956"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3399,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 3932843,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.1,
-        "pct_opaco": 97.69,
-        "pct_semitransparente": 0.21,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C2/Desert%20Titanium.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 16 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 16 Pro Max"
     },
     {
       "modelo": "iPhone 16e",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16e/iPhone_16e_frontal.png",
+          "resolucion": {
+            "ancho": 778,
+            "alto": 1586,
+            "texto": "778x1586"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 1823,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 421745,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "White",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.98,
+            "pct_opaco": 97.32,
+            "pct_semitransparente": 0.69,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C5/White.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 16e",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_16e",
       "variante": "e",
       "variante_adicional": true,
       "identificador_apple": "iPhone17,5",
@@ -1482,54 +1715,62 @@
       ],
       "lanzamiento": "2025-02-28",
       "color": "White",
-      "otros_colores_en_la_fuente": [
-        "Black"
+      "colores_del_modelo": [
+        "Black",
+        "White"
       ],
-      "archivo": "iPhone_16e.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_16e.png",
-      "resolucion": {
-        "ancho": 778,
-        "alto": 1586,
-        "texto": "778x1586"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 1823,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 421745,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.98,
-        "pct_opaco": 97.32,
-        "pct_semitransparente": 0.69,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone17%2C5/White.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C5.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 16e",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 16e"
     },
     {
       "modelo": "iPhone 17",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17/iPhone_17_frontal.png",
+          "resolucion": {
+            "ancho": 314,
+            "alto": 650,
+            "texto": "314x650"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 747,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 154182,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Lavender",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.18,
+            "pct_opaco": 96.63,
+            "pct_semitransparente": 1.19,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C3/Lavender.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 17",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_17",
       "variante": "Base",
       "variante_adicional": false,
       "identificador_apple": "iPhone18,3",
@@ -1541,57 +1782,65 @@
       ],
       "lanzamiento": "2025-09-19",
       "color": "Lavender",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
+        "Lavender",
         "Mist Blue",
         "Sage",
         "White"
       ],
-      "archivo": "iPhone_17.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_17.png",
-      "resolucion": {
-        "ancho": 314,
-        "alto": 650,
-        "texto": "314x650"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 747,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 154182,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.18,
-        "pct_opaco": 96.63,
-        "pct_semitransparente": 1.19,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C3/Lavender.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone18%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 17",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 17"
     },
     {
       "modelo": "iPhone Air",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_Air/iPhone_Air_frontal.png",
+          "resolucion": {
+            "ancho": 789,
+            "alto": 1626,
+            "texto": "789x1626"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 1869,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 548845,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Sky Blue",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.47,
+            "pct_opaco": 97.16,
+            "pct_semitransparente": 0.38,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C4/Sky%20Blue.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone Air",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_Air",
       "variante": "Air",
       "variante_adicional": false,
       "identificador_apple": "iPhone18,4",
@@ -1603,56 +1852,64 @@
       ],
       "lanzamiento": "2025-09-19",
       "color": "Sky Blue",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Cloud White",
         "Light Gold",
+        "Sky Blue",
         "Space Black"
       ],
-      "archivo": "iPhone_Air.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_Air.png",
-      "resolucion": {
-        "ancho": 789,
-        "alto": 1626,
-        "texto": "789x1626"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 1869,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 548845,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.47,
-        "pct_opaco": 97.16,
-        "pct_semitransparente": 0.38,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C4/Sky%20Blue.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone18%2C4.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone Air",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone Air"
     },
     {
       "modelo": "iPhone 17 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17_Pro/iPhone_17_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 542,
+            "alto": 1116,
+            "texto": "542x1116"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 1283,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 346387,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Cosmic Orange",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.34,
+            "pct_opaco": 96.8,
+            "pct_semitransparente": 0.86,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C1/Cosmic%20Orange.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 17 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_17_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone18,1",
@@ -1664,55 +1921,63 @@
       ],
       "lanzamiento": "2025-09-19",
       "color": "Cosmic Orange",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
+        "Cosmic Orange",
         "Deep Blue",
         "Silver"
       ],
-      "archivo": "iPhone_17_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_17_Pro.png",
-      "resolucion": {
-        "ancho": 542,
-        "alto": 1116,
-        "texto": "542x1116"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 1283,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 346387,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.34,
-        "pct_opaco": 96.8,
-        "pct_semitransparente": 0.86,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C1/Cosmic%20Orange.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone18%2C1.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 17 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 17 Pro"
     },
     {
       "modelo": "iPhone 17 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17_Pro_Max/iPhone_17_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1428,
+            "alto": 2959,
+            "texto": "1428x2959"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3402,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2062879,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Cosmic Orange",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.06,
+            "pct_opaco": 97.74,
+            "pct_semitransparente": 0.19,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C2/Cosmic%20Orange.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 17 Pro Max",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_17_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone18,2",
@@ -1724,55 +1989,63 @@
       ],
       "lanzamiento": "2025-09-19",
       "color": "Cosmic Orange",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
+        "Cosmic Orange",
         "Deep Blue",
         "Silver"
       ],
-      "archivo": "iPhone_17_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_17_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1428,
-        "alto": 2959,
-        "texto": "1428x2959"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3402,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 2062879,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.06,
-        "pct_opaco": 97.74,
-        "pct_semitransparente": 0.19,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C2/Cosmic%20Orange.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone18%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 17 Pro Max",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 17 Pro Max"
     },
     {
       "modelo": "iPhone 17e",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17e/iPhone_17e_frontal.png",
+          "resolucion": {
+            "ancho": 778,
+            "alto": 1586,
+            "texto": "778x1586"
+          },
+          "resolucion_limitada": true,
+          "alto_maximo_en_video_px": 1823,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 371619,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Soft Pink",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.98,
+            "pct_opaco": 97.32,
+            "pct_semitransparente": 0.69,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": false,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C5/Soft%20Pink.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 17e",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_17e",
       "variante": "e",
       "variante_adicional": true,
       "identificador_apple": "iPhone18,5",
@@ -1783,55 +2056,63 @@
       ],
       "lanzamiento": "2026-03-11",
       "color": "Soft Pink",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
+        "Soft Pink",
         "White"
       ],
-      "archivo": "iPhone_17e.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_17e.png",
-      "resolucion": {
-        "ancho": 778,
-        "alto": 1586,
-        "texto": "778x1586"
-      },
-      "resolucion_limitada": true,
-      "alto_maximo_en_video_px": 1823,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 371619,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.98,
-        "pct_opaco": 97.32,
-        "pct_semitransparente": 0.69,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": false,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone18%2C5/Soft%20Pink.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone18%2C5.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 17e",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 17e"
     },
     {
       "modelo": "iPhone 18 Pro",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_18_Pro/iPhone_18_Pro_frontal.png",
+          "resolucion": {
+            "ancho": 1318,
+            "alto": 2725,
+            "texto": "1318x2725"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3133,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 5004976,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Burgundy",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.69,
+            "pct_opaco": 97.1,
+            "pct_semitransparente": 0.2,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": true,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone19%2C2/Burgundy.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 18 Pro",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_18_Pro",
       "variante": "Pro",
       "variante_adicional": false,
       "identificador_apple": "iPhone19,2",
@@ -1843,112 +2124,128 @@
       ],
       "lanzamiento": "2026-09-18",
       "color": "Burgundy",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
+        "Burgundy",
         "Glacier",
         "Silver"
       ],
-      "archivo": "iPhone_18_Pro.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_18_Pro.png",
-      "resolucion": {
-        "ancho": 1318,
-        "alto": 2725,
-        "texto": "1318x2725"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3133,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 5004976,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.69,
-        "pct_opaco": 97.1,
-        "pct_semitransparente": 0.2,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": true,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone19%2C2/Burgundy.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone19%2C2.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 18 Pro",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 18 Pro"
     },
     {
       "modelo": "iPhone 18 Pro Max",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_frontal.png",
+          "resolucion": {
+            "ancho": 1428,
+            "alto": 2967,
+            "texto": "1428x2967"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3412,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 6014825,
+          "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
+          "color": "Burgundy",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.33,
+            "pct_opaco": 97.49,
+            "pct_semitransparente": 0.18,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": true,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone19%2C3/Burgundy.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone 18 Pro Max (US)",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_18_Pro_Max",
       "variante": "Pro Max",
       "variante_adicional": false,
       "identificador_apple": "iPhone19,3 / iPhone19,7",
       "numeros_de_modelo": "A3473",
       "lanzamiento": "2026-09-18",
       "color": "Burgundy",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
         "Black",
+        "Burgundy",
         "Glacier",
         "Silver"
       ],
-      "archivo": "iPhone_18_Pro_Max.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_18_Pro_Max.png",
-      "resolucion": {
-        "ancho": 1428,
-        "alto": 2967,
-        "texto": "1428x2967"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 3412,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 6014825,
-      "perspectiva": "Frontal, con el fondo de pantalla oficial de lanzamiento",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 2.33,
-        "pct_opaco": 97.49,
-        "pct_semitransparente": 0.18,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": true,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone19%2C3/Burgundy.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone19%2C3.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone 18 Pro Max (US)",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone 18 Pro Max (US)"
     },
     {
       "modelo": "iPhone Duo",
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/IPHONES/iPhone_Duo/iPhone_Duo_frontal.png",
+          "resolucion": {
+            "ancho": 2990,
+            "alto": 2143,
+            "texto": "2990x2143"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2464,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 5828951,
+          "perspectiva": "Frontal y trasera en escuadra (plegable)",
+          "color": "Night Sky",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.58,
+            "pct_opaco": 98.31,
+            "pct_semitransparente": 0.11,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "fondo_eliminado": null,
+            "margen_recortado": true,
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
+          },
+          "metodo": "Descarga directa del render oficial (sin cambios)",
+          "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone19%2C4/Night%20Sky.png",
+          "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB, renders oficiales de Apple)",
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
+            "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
+          },
+          "verificado": {
+            "modelo_confirmado_por_appledb": "iPhone Duo",
+            "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        }
+      },
+      "carpeta": "RECURSOS/IPHONES/iPhone_Duo",
       "variante": "Plegable",
       "variante_adicional": true,
       "identificador_apple": "iPhone19,4",
@@ -1960,81 +2257,49 @@
       ],
       "lanzamiento": "2026-10-23",
       "color": "Night Sky",
-      "otros_colores_en_la_fuente": [
+      "colores_del_modelo": [
+        "Night Sky",
         "Star White"
       ],
-      "archivo": "iPhone_Duo.png",
-      "ruta_local": "RECURSOS/IPHONES/iPhone_Duo.png",
-      "resolucion": {
-        "ancho": 2990,
-        "alto": 2143,
-        "texto": "2990x2143"
-      },
-      "resolucion_limitada": false,
-      "alto_maximo_en_video_px": 2464,
-      "formato": "PNG",
-      "modo_color": "RGBA",
-      "peso_bytes": 5828951,
-      "perspectiva": "Frontal y trasera en escuadra (plegable)",
-      "transparencia": {
-        "tiene_canal_alfa": true,
-        "pct_transparente": 1.58,
-        "pct_opaco": 98.31,
-        "pct_semitransparente": 0.11,
-        "esquinas_transparentes": true,
-        "transparencia_real": true
-      },
-      "procesado": {
-        "fondo_eliminado": null,
-        "margen_recortado": true,
-        "optimizacion": "oxipng nivel 3 (sin pérdida)",
-        "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)"
-      },
-      "url_original": "https://raw.githubusercontent.com/littlebyteorg/apple-device-images/b3082ba529681e25f3b465bcadf593460943687a/device/iPhone19%2C4/Night%20Sky.png",
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone19%2C4.json",
-      "fuente": "https://github.com/littlebyteorg/apple-device-images (AppleDB)",
-      "licencia": {
-        "titular_derechos": "Apple Inc.",
-        "tipo": "Render oficial de producto de Apple (no es una licencia libre).",
-        "redistribucion": "Publicado en el repositorio público littlebyteorg/apple-device-images (AppleDB). La licencia MIT del repositorio cubre su código, no las imágenes de Apple.",
-        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin alterar el producto y sin sugerir patrocinio o aval de Apple.",
-        "precaucion": "Para publicidad pagada o piezas comerciales donde el iPhone sea protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' de Apple."
-      },
-      "verificado": {
-        "modelo_confirmado_por_appledb": "iPhone Duo",
-        "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
-        "fecha": "2026-11-26"
-      }
+      "modelo_confirmado_por_appledb": "iPhone Duo"
     }
   ],
   "no_disponibles": [
     {
       "modelo": "iPhone 18",
-      "motivo": "No lanzado: en septiembre de 2026 Apple solo lanzó iPhone 18 Pro, 18 Pro Max e iPhone Duo. Los reportes ubican al iPhone 18 base en la primavera (boreal) de 2027."
+      "motivo": "No lanzado: en septiembre de 2026 Apple solo lanzó iPhone 18 Pro, 18 Pro Max e iPhone Duo. Los reportes ubican al iPhone 18 base en la primavera (boreal) de 2027.",
+      "vista": "modelo"
     },
     {
       "modelo": "iPhone 18e",
-      "motivo": "No lanzado (los reportes lo ubican en 2027)."
+      "motivo": "No lanzado (los reportes lo ubican en 2027).",
+      "vista": "modelo"
     },
     {
       "modelo": "iPhone Air 2 / iPhone 18 Air",
-      "motivo": "No lanzado (los reportes lo ubican en 2027)."
+      "motivo": "No lanzado (los reportes lo ubican en 2027).",
+      "vista": "modelo"
     },
     {
       "modelo": "iPhone 18 Plus / iPhone 18 mini",
-      "motivo": "No existen: Apple no anunció esas variantes."
+      "motivo": "No existen: Apple no anunció esas variantes.",
+      "vista": "modelo"
     },
     {
       "modelo": "iPhone 14 mini, 15 mini, 16 mini, 17 mini",
-      "motivo": "No existen: la línea mini terminó con el iPhone 13 mini."
+      "motivo": "No existen: la línea mini terminó con el iPhone 13 mini.",
+      "vista": "modelo"
     },
     {
       "modelo": "iPhone 17 Plus",
-      "motivo": "No existe: en 2025 el iPhone Air reemplazó al Plus."
+      "motivo": "No existe: en 2025 el iPhone Air reemplazó al Plus.",
+      "vista": "modelo"
     },
     {
       "modelo": "iPhone 11 Plus / 12 Plus / 13 Plus",
-      "motivo": "No existen: la variante Plus empezó con el iPhone 14."
+      "motivo": "No existen: la variante Plus empezó con el iPhone 14.",
+      "vista": "modelo"
     }
   ]
 }

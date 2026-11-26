@@ -8,13 +8,21 @@ Antes de buscar o generar una imagen nueva, revisá siempre si ya existe en esta
 ```
 RECURSOS/
 ├── IPHONES/
-│   ├── iPhone_11.png … iPhone_18_Pro_Max.png   # 1 render oficial por modelo, PNG RGBA transparente
-│   ├── catalogo.json                           # fuente de verdad: modelo, ruta, resolución, URL, licencia
-│   └── _indice_visual.jpg                      # hoja de contacto para ver la biblioteca de un vistazo
+│   ├── iPhone_11/
+│   │   ├── iPhone_11_trasera.png     # vista TRASERA (la que se usa por defecto)
+│   │   └── iPhone_11_frontal.png     # vista frontal con el fondo de pantalla oficial
+│   ├── iPhone_11_Pro/ … iPhone_18_Pro_Max/   # una carpeta por modelo, mismo esquema
+│   ├── catalogo.json                 # fuente de verdad: modelo, rutas, resolución, URL, licencia
+│   └── _indice_visual.jpg            # hoja de contacto (trasera + frontal de cada modelo)
 └── _scripts/
-    ├── descargar_iphones.py   # descarga, verifica (AppleDB + Pillow), optimiza y regenera el catálogo
-    └── buscar_iphone.py       # detecta modelos de iPhone en un texto y devuelve su PNG
+    ├── buscar_iphone.py         # detecta modelos de iPhone en un texto y devuelve su PNG
+    ├── descargar_iphones.py     # frontales: descarga, verifica (AppleDB + Pillow), optimiza
+    ├── traseras_iphones.py      # traseras: recorte de imágenes de la Apple Store o render 3D oficial
+    ├── extraer_trasera.py       # separa la trasera de una composición oficial trasera+frente
+    └── render_trasera_usdz.py   # render de la trasera desde el modelo 3D (USDZ) de Apple con Blender
 ```
+
+Todas las imágenes son PNG RGBA con transparencia real, recortadas al contorno del equipo.
 
 ## Regla obligatoria: iPhones en ediciones de video
 
@@ -27,12 +35,15 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
    python3 RECURSOS/_scripts/buscar_iphone.py --archivo transcripcion.srt
    python3 RECURSOS/_scripts/buscar_iphone.py "texto del guion"
    python3 RECURSOS/_scripts/buscar_iphone.py --modelo "iPhone 17 Pro"
+   python3 RECURSOS/_scripts/buscar_iphone.py --modelo "iPhone 17 Pro" --vista frontal
    ```
-   Devuelve, por mención: `modelo`, `disponible`, `ruta`, `resolucion`, `resolucion_limitada`,
-   `alto_maximo_en_video_px`. Con un SRT, usar el tiempo del subtítulo donde aparece la mención para
-   sincronizar la entrada del gráfico.
-2. **Usar la imagen de `ruta`** (`RECURSOS/IPHONES/<Modelo>.png`) para la animación o el motion graphic,
-   sin pedirle confirmación al usuario y sin buscarla de nuevo en internet.
+   Devuelve, por mención: `modelo`, `disponible`, `vista`, `ruta`, `rutas` (trasera y frontal),
+   `resolucion`, `resolucion_limitada`, `alto_maximo_en_video_px`. Con un SRT, usá el tiempo del
+   subtítulo donde aparece la mención para sincronizar la entrada del gráfico.
+2. **Usar la TRASERA por defecto** (`RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png`): es la vista que
+   identifica el modelo (cámaras, color, materiales). Usá la frontal sólo si el video habla de la
+   pantalla, la Dynamic Island o el contenido en pantalla, o si el usuario lo pide. Si un modelo no
+   tiene trasera (`vista_pedida_disponible: false`), el buscador devuelve la frontal: usala y avisá.
 3. **Nunca sustituir un modelo por otro.** Si `disponible` es `false` (p. ej. "iPhone 18" base,
    "iPhone 17 Plus"), no uses la imagen de un modelo parecido: resolvé ese momento con tipografía o un
    ícono genérico, y avisale al usuario qué modelo faltó y por qué (campo `motivo`).
@@ -40,25 +51,25 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
 
 ### Cómo usar las imágenes en motion graphics
 
-- **Perspectiva:** los renders son **frontales** (con el fondo de pantalla oficial de lanzamiento de cada
-  modelo); el iPhone Duo es la única excepción. Para un look 3/4, aplicá la rotación en la animación:
-  `rotateY(-18deg)` a `rotateY(-25deg)` con `perspective: 1600px`, más una sombra suave bajo el equipo.
-  No deformes el PNG de forma permanente.
+- **Perspectiva:** traseras y frontales son vistas ortogonales (de frente a la cara). Para un look 3/4,
+  aplicá la rotación en la animación: `rotateY(18deg)` a `rotateY(25deg)` con `perspective: 1600px`,
+  más una sombra suave. No deformes el PNG de forma permanente.
+- **Giro trasera → frontal:** para "dar vuelta" el teléfono, animá `rotateY` de 0° a 90° con la trasera,
+  cambiá a la frontal en 90° y seguí de 90° a 0° (o usá `backface-visibility: hidden` con las dos caras).
+  Ambas vistas de un mismo modelo están en el mismo color.
 - **Entrada recomendada:** subida desde abajo + escala 0.92 → 1.0 + opacidad 0 → 1, entre 350 y 500 ms,
   con easing `cubic-bezier(0.22, 1, 0.36, 1)`. Salida más corta (200–300 ms).
-- **Integración:** sombra proyectada (blur 40–80 px, opacidad 25–35 %) y, opcionalmente, un resplandor del
-  color dominante del fondo de pantalla del modelo. Sobre fondos oscuros, un borde de luz sutil (rim light).
+- **Integración:** sombra proyectada (blur 40–80 px, opacidad 25–35 %) y, opcionalmente, un resplandor
+  del color del equipo. Sobre fondos oscuros, un borde de luz sutil (rim light).
 - **Resolución:** no mostrar el equipo más alto que `alto_maximo_en_video_px` (altura nativa + 15 %).
-  Modelos con `resolucion_limitada: true`: iPhone 16 (1582 px), 16 Pro (1574 px), 16e y 17e (1586 px),
-  Air (1626 px), **17 Pro (1116 px)** y **iPhone 17 (650 px)**. En un video vertical 1080×1920, a estos
-  últimos dos usalos en composiciones de tamaño medio o chico (comparativas, tarjetas, picture-in-picture),
-  nunca a pantalla completa.
-- **Comparativas de tamaño:** alineá los equipos por la base y escalalos según su altura real en mm (ficha
-  técnica de Apple), no según la altura en píxeles del PNG: cada render está recortado al equipo y tiene
-  su propia escala.
+  Las traseras miden entre 2364 y 3966 px de alto (todas sirven a pantalla completa en 1080×1920).
+  Frontales con `resolucion_limitada: true`: iPhone 16, 16 Pro, 16e, 17e y Air (~1580–1630 px),
+  **17 Pro (1116 px)** y **iPhone 17 (650 px)**: usalas en tamaño medio o chico.
+- **Comparativas de tamaño:** alineá los equipos por la base y escalalos según su altura real en mm
+  (ficha técnica de Apple), no según la altura en píxeles del PNG: cada imagen tiene su propia escala.
 - **ffmpeg (overlay rápido):**
   ```bash
-  ffmpeg -i video.mp4 -loop 1 -i RECURSOS/IPHONES/iPhone_15_Pro_Max.png \
+  ffmpeg -i video.mp4 -loop 1 -i RECURSOS/IPHONES/iPhone_15_Pro_Max/iPhone_15_Pro_Max_trasera.png \
     -filter_complex "[1:v]scale=-1:1200,format=rgba,fade=t=in:st=2:d=0.4:alpha=1[ph];\
   [0:v][ph]overlay=(W-w)/2:(H-h)/2+80:enable='between(t,2,6)':shortest=1" -c:a copy salida.mp4
   ```
@@ -67,20 +78,31 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
 
 ### Licencia (leer antes de usar en anuncios)
 
-Las imágenes son renders oficiales de producto **© Apple Inc.**, tomados del repositorio público de
-AppleDB (`littlebyteorg/apple-device-images`). **No son de licencia libre.** El uso previsto aceptable es
-nominativo o editorial: identificar el modelo en reseñas, comparativas, noticias y tutoriales, sin alterar
-el producto y sin sugerir patrocinio de Apple. Si el video es **publicidad paga** con el iPhone como
-protagonista, avisale al usuario que revise las *Guidelines for Using Apple Trademarks and Copyrights*.
+Todo es material **© Apple Inc.** y **no es de licencia libre**:
+- Frontales: renders oficiales tomados del repositorio de AppleDB, sin cambios.
+- Traseras de iPhone 11 a 13, 17 Pro y 18 Pro: recortadas de las imágenes oficiales de la Apple Store.
+- Traseras de iPhone 14 a 17 y Air: renderizadas desde el modelo 3D oficial de Apple (AR Quick Look),
+  con el color calibrado contra la foto oficial.
+
+El uso previsto aceptable es nominativo o editorial (reseñas, comparativas, noticias, tutoriales), sin
+sugerir patrocinio de Apple. Si el video es **publicidad paga** con el iPhone como protagonista, avisale
+al usuario que revise las *Guidelines for Using Apple Trademarks and Copyrights* o use fotos propias.
+No uses imágenes de Apple Newsroom para recortar: su aviso legal prohíbe modificarlas.
 El detalle por imagen está en el campo `licencia` de `catalogo.json`.
 
 ### Mantener la biblioteca
 
-- Modelo nuevo (p. ej. iPhone 18 base en 2027): agregá una fila a `MODELOS` en
-  `RECURSOS/_scripts/descargar_iphones.py`, con el identificador de AppleDB y un color que exista en el
-  repositorio de imágenes, y corré `python3 RECURSOS/_scripts/descargar_iphones.py`. El script verifica el
-  nombre contra AppleDB, comprueba el canal alfa con Pillow (si una imagen llega con fondo sólido, lo quita
-  con `rembg`; instalalo con `pip install "rembg[cpu]"`), recorta márgenes, optimiza sin pérdida y regenera
-  `catalogo.json` y `_indice_visual.jpg`. Sacá el modelo de `NO_DISPONIBLES`.
-- Verificación sin descargar: `python3 RECURSOS/_scripts/descargar_iphones.py --solo-verificar`.
+- Modelo nuevo (p. ej. iPhone 18 base en 2027):
+  1. Frontal: agregá una fila a `MODELOS` en `descargar_iphones.py` (identificador de AppleDB y color) y
+     corré `python3 RECURSOS/_scripts/descargar_iphones.py`. Sacá el modelo de `NO_DISPONIBLES`.
+  2. Trasera: agregá una fila a `TRASERAS` en `traseras_iphones.py`. Usá `"2d"` si en la imagen de la
+     Apple Store la trasera está completa delante del frente; si el frente la tapa, `"3d"` con el USDZ
+     de AR de apple.com y una imagen de referencia del mismo color. Corré
+     `BLENDER_PY=<python con bpy> python3 RECURSOS/_scripts/traseras_iphones.py`
+     (bpy: `uv venv -p 3.11 blenv && VIRTUAL_ENV=blenv uv pip install bpy`).
+- Ambos scripts verifican el canal alfa con Pillow (si una imagen llega con fondo sólido, se quita con
+  `rembg`: `pip install "rembg[cpu]"`), optimizan sin pérdida y regeneran `catalogo.json` y
+  `_indice_visual.jpg`. Necesitan acceso de red a `store.storeimages.cdn-apple.com`, `www.apple.com` y
+  `raw.githubusercontent.com`.
+- Verificación sin descargar: `--solo-verificar` en cualquiera de los dos scripts.
 - Después de agregar un modelo, revisá visualmente `_indice_visual.jpg` antes de dar el trabajo por terminado.

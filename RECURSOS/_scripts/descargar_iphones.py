@@ -2,11 +2,13 @@
 """
 Biblioteca de recursos gráficos — iPhones (iPhone 11 → iPhone 18 Pro Max).
 
-Descarga un render oficial (PNG con transparencia) de cada modelo de iPhone,
+VISTA FRONTAL. Descarga un render oficial (PNG con transparencia) de cada modelo,
 verifica que el modelo sea el correcto contra la base de datos AppleDB,
 comprueba con Pillow que tenga un canal alfa con transparencia real,
 recorta el margen transparente sobrante, optimiza el PNG sin pérdida y
-genera RECURSOS/IPHONES/catalogo.json + un índice visual.
+actualiza RECURSOS/IPHONES/catalogo.json + el índice visual.
+Cada modelo vive en su propia carpeta: RECURSOS/IPHONES/<Modelo>/<Modelo>_frontal.png
+(las traseras las genera traseras_iphones.py en la misma carpeta).
 
 Uso:
     python3 RECURSOS/_scripts/descargar_iphones.py            # descarga todo lo que falte
@@ -123,8 +125,55 @@ def raw_url(repo: str, ref: str, path: str) -> str:
     return RAW.format(repo=repo, ref=ref, path=urllib.parse.quote(path))
 
 
-def nombre_archivo(modelo: str) -> str:
-    return modelo.replace(" ", "_") + ".png"
+def slug(modelo: str) -> str:
+    return modelo.replace(" ", "_")
+
+
+def carpeta(modelo: str) -> Path:
+    """Cada modelo tiene su propia carpeta: RECURSOS/IPHONES/iPhone_15_Pro/"""
+    return DESTINO / slug(modelo)
+
+
+def ruta_vista(modelo: str, vista: str) -> Path:
+    """vista: 'trasera' o 'frontal' -> RECURSOS/IPHONES/iPhone_15_Pro/iPhone_15_Pro_trasera.png"""
+    return carpeta(modelo) / f"{slug(modelo)}_{vista}.png"
+
+
+def rel(p: Path) -> str:
+    return str(p.relative_to(RAIZ.parent))
+
+
+def cargar_catalogo() -> dict:
+    """Devuelve {modelo: entrada}. Acepta el formato actual (lista 'modelos')."""
+    if not CATALOGO.exists():
+        return {}
+    data = json.loads(CATALOGO.read_text())
+    return {e["modelo"]: e for e in data.get("modelos", [])}
+
+
+def guardar_catalogo(modelos: dict, no_disponibles: list) -> None:
+    orden = [m[0] for m in MODELOS]
+    lista = [modelos[m] for m in orden if m in modelos]
+    con_trasera = sum(1 for e in lista if "trasera" in e.get("imagenes", {}))
+    con_frontal = sum(1 for e in lista if "frontal" in e.get("imagenes", {}))
+    catalogo = {
+        "biblioteca": "RECURSOS/IPHONES",
+        "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png "
+                      "(PNG RGBA con transparencia real; una carpeta por modelo)",
+        "vista_por_defecto": "trasera",
+        "generado": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "scripts": {
+            "frontales": "RECURSOS/_scripts/descargar_iphones.py",
+            "traseras": "RECURSOS/_scripts/traseras_iphones.py",
+            "busqueda": "RECURSOS/_scripts/buscar_iphone.py",
+        },
+        "total_modelos": len(lista),
+        "total_traseras": con_trasera,
+        "total_frontales": con_frontal,
+        "modelos": lista,
+        "no_disponibles": no_disponibles,
+    }
+    CATALOGO.write_text(json.dumps(catalogo, ensure_ascii=False, indent=2) + "\n")
 
 
 def descargar(url: str, intentos: int = 4) -> bytes:
@@ -199,10 +248,12 @@ def guardar_png(im: Image.Image, destino: Path) -> str:
     return metodo
 
 
-def indice_visual(entradas: list[dict]) -> None:
-    celda_h, celda_w, pie = 420, 300, 34
-    cols = 8
-    filas = (len(entradas) + cols - 1) // cols
+def indice_visual(modelos: dict) -> None:
+    """Hoja de contacto: por modelo, trasera (izquierda) y frontal (derecha) sobre damero."""
+    orden = [m[0] for m in MODELOS if m[0] in modelos]
+    celda_h, celda_w, pie = 440, 360, 34
+    cols = 6
+    filas = (len(orden) + cols - 1) // cols
     W, H = cols * celda_w, filas * (celda_h + pie)
     hoja = Image.new("RGB", (W, H), (255, 255, 255))
     d = ImageDraw.Draw(hoja)
@@ -215,13 +266,19 @@ def indice_visual(entradas: list[dict]) -> None:
         fuente = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 17)
     except OSError:
         fuente = ImageFont.load_default()
-    for i, e in enumerate(entradas):
-        im = Image.open(DESTINO / e["archivo"]).convert("RGBA")
-        im.thumbnail((celda_w - 24, celda_h - 24), Image.LANCZOS)
+    for i, modelo in enumerate(orden):
         x, y = (i % cols) * celda_w, (i // cols) * (celda_h + pie)
-        hoja.paste(im, (x + (celda_w - im.width) // 2, y + (celda_h - im.height) // 2), im)
+        imgs = modelos[modelo].get("imagenes", {})
+        vistas = [v for v in ("trasera", "frontal") if v in imgs]
+        ancho_v = (celda_w - 20) // max(1, len(vistas))
+        for j, v in enumerate(vistas):
+            im = Image.open(RAIZ.parent / imgs[v]["ruta"]).convert("RGBA")
+            im.thumbnail((ancho_v - 8, celda_h - 24), Image.LANCZOS)
+            cx = x + 10 + j * ancho_v + (ancho_v - im.width) // 2
+            hoja.paste(im, (cx, y + (celda_h - im.height) // 2), im)
         d.rectangle([x, y + celda_h, x + celda_w, y + celda_h + pie], fill=(18, 18, 18))
-        d.text((x + 10, y + celda_h + 7), e["modelo"], fill=(255, 255, 255), font=fuente)
+        etiqueta = modelo + ("" if "trasera" in vistas else "  (sin trasera)")
+        d.text((x + 10, y + celda_h + 7), etiqueta, fill=(255, 255, 255), font=fuente)
     hoja.save(INDICE_VISUAL, quality=88)
 
 
@@ -232,15 +289,13 @@ def main() -> int:
     args = ap.parse_args()
 
     DESTINO.mkdir(parents=True, exist_ok=True)
-    previo = {}
-    if CATALOGO.exists():
-        previo = {e["modelo"]: e for e in json.loads(CATALOGO.read_text())["imagenes"]}
-
-    entradas, fallos = [], []
+    modelos = cargar_catalogo()
+    fallos = []
     for modelo, ident, color, variante, extra in MODELOS:
-        archivo = nombre_archivo(modelo)
-        ruta = DESTINO / archivo
+        ruta = ruta_vista(modelo, "frontal")
         url_img = raw_url(IMG_REPO, IMG_COMMIT, f"device/{ident}/{color}.png")
+        entrada = modelos.setdefault(modelo, {"modelo": modelo})
+        previo = entrada.get("imagenes", {}).get("frontal", {})
         try:
             ficha, url_ficha = ficha_appledb(ident)
             nombre_db = ficha.get("name", "")
@@ -251,7 +306,7 @@ def main() -> int:
             if colores_db and color not in colores_db:
                 raise ValueError(f"El color '{color}' no figura en AppleDB para {modelo}: {colores_db}")
 
-            proc_prev = previo.get(modelo, {}).get("procesado", {})
+            proc_prev = previo.get("procesado", {})
             fondo_eliminado = proc_prev.get("fondo_eliminado")
             recortado = proc_prev.get("margen_recortado", False)
             optimizacion = proc_prev.get("optimizacion")
@@ -269,6 +324,7 @@ def main() -> int:
                     im = quitar_fondo(im)
                     fondo_eliminado = "rembg (u2net)"
                 im, recortado = recortar_margen(im)
+                ruta.parent.mkdir(parents=True, exist_ok=True)
                 optimizacion = guardar_png(im, ruta)
                 im = Image.open(ruta)
                 im.load()
@@ -277,17 +333,21 @@ def main() -> int:
             if not alfa.get("transparencia_real"):
                 raise ValueError(f"sin transparencia real: {alfa}")
 
-            entradas.append({
+            entrada.update({
                 "modelo": modelo,
+                "carpeta": rel(carpeta(modelo)),
                 "variante": variante,
                 "variante_adicional": extra,
                 "identificador_apple": ident if ident != "iPhone19,3" else "iPhone19,3 / iPhone19,7",
                 "numeros_de_modelo": ficha.get("model", []),
                 "lanzamiento": ficha.get("released"),
                 "color": color,
-                "otros_colores_en_la_fuente": [c for c in colores_db if c != color],
-                "archivo": archivo,
-                "ruta_local": f"RECURSOS/IPHONES/{archivo}",
+                "colores_del_modelo": colores_db,
+                "url_verificacion_modelo": url_ficha,
+                "modelo_confirmado_por_appledb": nombre_db,
+            })
+            entrada.setdefault("imagenes", {})["frontal"] = {
+                "ruta": rel(ruta),
                 "resolucion": {"ancho": im.width, "alto": im.height, "texto": f"{im.width}x{im.height}"},
                 # Limitada = no llega a cubrir la altura de un video vertical 1080x1920
                 # sin reescalar. Hasta +15 % de ampliación no se nota en video.
@@ -298,6 +358,7 @@ def main() -> int:
                 "peso_bytes": ruta.stat().st_size,
                 "perspectiva": ("Frontal y trasera en escuadra (plegable)" if ident == "iPhone19,4"
                                  else "Frontal, con el fondo de pantalla oficial de lanzamiento"),
+                "color": color,
                 "transparencia": alfa,
                 "procesado": {
                     "fondo_eliminado": fondo_eliminado,
@@ -305,37 +366,33 @@ def main() -> int:
                     "optimizacion": optimizacion,
                     "modificaciones_de_contenido": "Ninguna (sin reescalado, sin retoque)",
                 },
+                "metodo": "Descarga directa del render oficial (sin cambios)",
                 "url_original": url_img,
-                "url_verificacion_modelo": url_ficha,
-                "fuente": f"https://github.com/{IMG_REPO} (AppleDB)",
+                "fuente": f"https://github.com/{IMG_REPO} (AppleDB, renders oficiales de Apple)",
                 "licencia": LICENCIA,
                 "verificado": {
                     "modelo_confirmado_por_appledb": nombre_db,
                     "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
                     "fecha": dt.date.today().isoformat(),
                 },
-            })
-            print(f"✓ {modelo:20s} {im.width}x{im.height}  transparente {alfa['pct_transparente']}%")
+            }
+            print(f"✓ {modelo:20s} frontal {im.width}x{im.height}  transparente {alfa['pct_transparente']}%")
         except Exception as e:  # noqa: BLE001 — se informa y se sigue con el resto
-            fallos.append({"modelo": modelo, "error": str(e)})
+            fallos.append({"modelo": modelo, "vista": "frontal", "motivo": str(e)})
             print(f"✗ {modelo}: {e}", file=sys.stderr)
 
-    catalogo = {
-        "biblioteca": "RECURSOS/IPHONES",
-        "descripcion": "Un render oficial por modelo de iPhone (11 → 18 Pro Max), PNG RGBA con transparencia real.",
-        "generado": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-        "script": "RECURSOS/_scripts/descargar_iphones.py",
-        "fuente_imagenes": {"repositorio": f"https://github.com/{IMG_REPO}", "commit": IMG_COMMIT},
-        "fuente_verificacion": f"https://github.com/{DB_REPO}",
-        "total": len(entradas),
-        "imagenes": entradas,
-        "no_disponibles": NO_DISPONIBLES + [{"modelo": f["modelo"], "motivo": f["error"]} for f in fallos],
-    }
-    CATALOGO.write_text(json.dumps(catalogo, ensure_ascii=False, indent=2) + "\n")
-    if entradas:
-        indice_visual(entradas)
-    print(f"\n{len(entradas)} imágenes OK, {len(fallos)} fallos → {CATALOGO.relative_to(RAIZ.parent)}")
+    no_disp = NO_DISPONIBLES_BASE()
+    no_disp += [f for f in json.loads(CATALOGO.read_text()).get("no_disponibles", [])
+                if f.get("vista") == "trasera"] if CATALOGO.exists() else []
+    no_disp += fallos
+    guardar_catalogo(modelos, no_disp)
+    indice_visual(modelos)
+    print(f"\n{len(MODELOS) - len(fallos)} frontales OK, {len(fallos)} fallos → {rel(CATALOGO)}")
     return 1 if fallos else 0
+
+
+def NO_DISPONIBLES_BASE() -> list:
+    return [dict(d, vista="modelo") for d in NO_DISPONIBLES]
 
 
 if __name__ == "__main__":
