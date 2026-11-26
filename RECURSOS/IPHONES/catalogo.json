@@ -2,7 +2,7 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T20:48:24+00:00",
+  "generado": "2026-11-26T20:49:05+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
@@ -1193,7 +1193,32 @@
         "Silver"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C2.json",
-      "modelo_confirmado_por_appledb": "iPhone 13 Pro"
+      "modelo_confirmado_por_appledb": "iPhone 13 Pro",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-13-pro/2022/e79ab92e-2755-493d-9590-3f5d2c50216d/quick-look/iphone_13_pro_max_sierra_blue_5G_ios15.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-max-blue-2023?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Sierra Blue",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 13 Pro Max",
+          "nota": "iPhone 13 Pro y iPhone 13 Pro Max tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 13 Pro Max."
+        }
+      }
     },
     {
       "modelo": "iPhone 13 Pro Max",
@@ -1313,7 +1338,30 @@
         "Silver"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C3.json",
-      "modelo_confirmado_por_appledb": "iPhone 13 Pro Max"
+      "modelo_confirmado_por_appledb": "iPhone 13 Pro Max",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-13-pro/2022/e79ab92e-2755-493d-9590-3f5d2c50216d/quick-look/iphone_13_pro_max_sierra_blue_5G_ios15.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-max-blue-2023?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Sierra Blue",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          }
+        }
+      }
     },
     {
       "modelo": "iPhone 14",
@@ -1454,6 +1502,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14/iphone_14_purple_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-purple-select-202209?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Purple",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -1603,6 +1652,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14/iphone_14_purple_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-purple-select-202209?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Purple",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -1749,6 +1799,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_max_deep_purple_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-deeppurple-select?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Deep Purple",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -1895,6 +1946,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_max_deep_purple_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-deeppurple-select?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Deep Purple",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2039,6 +2091,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_pink_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pink-select-202309?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Pink",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2183,6 +2236,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_pink_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pink-select-202309?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Pink",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2328,6 +2382,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15-pro/iphone_15_pro_natural_titanium_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-15-pro-naturaltitanium-202412?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Natural Titanium",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2471,6 +2526,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15-pro/iphone_15_pro_max_natural_titanium_5G.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-15-pro-max-naturaltitanium-202412?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Natural Titanium",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2563,6 +2619,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16/iphone-16-ultramarine-no-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-ultramarine-select-202409?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Ultramarine",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2655,6 +2712,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16/iphone-16-ultramarine-no-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-ultramarine-select-202409?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Ultramarine",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2748,6 +2806,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16-pro/iphone-16-pro-no-sim-desert-titanium.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-deserttitanium-select?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Desert Titanium",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2839,6 +2898,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16-pro/iphone-16-pro-max-no-sim-desert-titanium.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-max-deserttitanium-select?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Desert Titanium",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -2998,6 +3058,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-17/2025/b2c72de3-1cbc-4e24-b4d3-23c7abcec4ec/ar/iphone-17-e-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-lavender-202509?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Lavender",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -3089,6 +3150,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-air/2025/731189b1-a606-493f-afa4-7c766a8fd08d/ar/iphone-air-e-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-air-finish-select-skyblue-202509?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Sky Blue",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -3225,6 +3287,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-17-pro/2025/704d4474-8e63-4ce7-9917-bb47b1ca4ba0/ar/iphone-17-pro-e-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-max-finish-select-cosmicorange-202509?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Cosmic Orange",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -3363,6 +3426,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-17-pro/2025/704d4474-8e63-4ce7-9917-bb47b1ca4ba0/ar/iphone-17-pro-e-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-max-finish-select-cosmicorange-202509?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Cosmic Orange",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -3567,6 +3631,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/ar/iphone-18-pro-e-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-max-finish-select-burgundy-202609?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Burgundy",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",
@@ -3701,6 +3766,7 @@
           "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
           "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/ar/iphone-18-pro-e-sim.usdz",
           "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-max-finish-select-burgundy-202609?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Burgundy",
           "balance_rgb": null,
           "licencia": {
             "titular_derechos": "Apple Inc.",

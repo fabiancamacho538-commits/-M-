@@ -53,12 +53,65 @@ DOBLES_3D = {
 }
 
 
+# Modelos 3D oficiales de 2019-2021 (Apple ya no los enlaza, pero siguen alojados en apple.com;
+# las rutas se recuperaron de copias públicas de las páginas de producto de esos años).
+_Q20 = "iphone-12-pro/2020/e70ffbd8-50f1-40f3-ac36-0f03a15ac314/quick-look/modern"
+_Q22 = "iphone-13-pro/2022/e79ab92e-2755-493d-9590-3f5d2c50216d/quick-look"
+_SH22 = "iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9"
+ANTIGUOS_3D = {
+    "iPhone 11":         ("iphone/2021/b943f1e4-c345-40e1-b40c-36a42c817502/quick-look/modern/iphone_11_purple_ios13.usdz",
+                          "refurb-iphone11-purple-2019", "", ""),
+    "iPhone 11 Pro":     ("iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/quick-look/modern/iphone-11-pro.usdz",
+                          "refurb-iphone-11-pro-midnight-green-2019", "", ""),
+    "iPhone 12":         (f"{_SH22}/iphone-12/iphone_12_purple_5G_ios14.usdz", "refurb-iphone-12-purple-2021", "", ""),
+    "iPhone 12 Pro Max": (f"{_Q20}/iphone_12_pro_max_pacific_blue_5G_ios14.usdz", "refurb-iphone-12-pro-max-blue-2020", "", ""),
+    "iPhone 13":         (f"{_SH22}/iphone-13/iphone_13_green_5G_ios15.usdz", "refurb-iphone-13-green-2023", "", ""),
+    "iPhone 13 Pro Max": (f"{_Q22}/iphone_13_pro_max_sierra_blue_5G_ios15.usdz", "refurb-iphone-13-pro-max-blue-2023", "", ""),
+    "iPhone Duo":        ("iphone-duo/2026/9305e4b9-72d9-4c05-9381-b572adadd5e5/ar/iPhone_Duo_e-sim_Star-White_Variant.usdz",
+                          "", "fapSTOypmavuPic,tLtsGCMtMAZfCYN", ""),
+}
+# Opciones por modelo: INVERTIR (detección pantalla/trasera), FILL (encuadre), calibración de color.
+OPCIONES = {
+    "iPhone 11 Pro": {"INVERTIR": "1"},
+    "iPhone 13": {"calibracion": "solo_trasera", "color": "Green (el modelo 3D oficial sólo existe en verde)"},
+    "iPhone Duo": {"INVERTIR": "1", "FILL": "0.62", "calibracion": "ninguna",
+                   "color": "Star White (el modelo 3D oficial sólo existe en Star White)"},
+}
+
+
 def fuentes_3d() -> dict:
     """modelo -> (usdz, referencia de color, mallas a ocultar, grupo a conservar)"""
     d = {m: (src, ref, hide, "") for m, (met, src, ref, hide) in TRASERAS.items() if met == "3d"}
     d.update({m: (*v, "") for m, v in EXTRA_3D.items()})
     d.update(DOBLES_3D)
+    d.update(ANTIGUOS_3D)
     return d
+
+
+def texturas_png(usdz: Path, destino: Path) -> Path:
+    """Blender no lee HEIC ni AVIF: se extraen del USDZ y se convierten a PNG (pillow-heif)."""
+    import io, zipfile
+    destino.mkdir(parents=True, exist_ok=True)
+    try:
+        from pillow_heif import register_heif_opener
+        register_heif_opener()
+        try:
+            from pillow_heif import register_avif_opener
+            register_avif_opener()
+        except ImportError:
+            pass
+    except ImportError:
+        return destino
+    try:
+        z = zipfile.ZipFile(usdz)
+    except zipfile.BadZipFile:
+        return destino
+    for i in z.infolist():
+        if i.filename.lower().endswith((".heic", ".avif")):
+            out = destino / (Path(i.filename).stem + ".png")
+            if not out.exists():
+                Image.open(io.BytesIO(z.read(i))).save(out)
+    return destino
 
 
 def _ganancias(cr: np.ndarray, cn: np.ndarray) -> np.ndarray:
@@ -82,7 +135,7 @@ def calibrar_y_aplicar(frames: list[Path], ref: np.ndarray, frontal: np.ndarray,
     first, last = rgba(frames[0]), rgba(frames[-1])
     gb = _ganancias(color_parche(ref, caja_trasera(ref[..., 3], ratio, True)),
                     color_parche(last, caja_trasera(last[..., 3], ratio, False)))
-    gf = _ganancias(_parche_pantalla(frontal), _parche_pantalla(first))
+    gf = _ganancias(_parche_pantalla(frontal), _parche_pantalla(first)) if frontal is not None else gb
     outdir.mkdir(parents=True, exist_ok=True)
     n = len(frames) - 1
     for i, f in enumerate(frames):
@@ -162,7 +215,8 @@ def registrar(modelos: dict, modelo: str, info: dict | None = None) -> bool:
                   "color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera "
                   "contra la foto oficial de la Apple Store",
         "url_modelo_3d": AR.format(src),
-        "calibrado_contra": STORE.format(ref),
+        "calibrado_contra": STORE.format(ref) if ref else None,
+        "color_de_la_animacion": OPCIONES.get(modelo, {}).get("color", modelos.get(modelo, {}).get("color")),
         "balance_rgb": (info or {}).get("balance_rgb", prev_info.get("balance_rgb")),
         "licencia": LICENCIA_TRASERA,
     }
@@ -203,19 +257,27 @@ def main() -> int:
             if not usdz.exists():
                 usdz.write_bytes(descargar(AR.format(src)))
             ref_p = cache / f"{ref_name}.png"
-            if not ref_p.exists():
+            if ref_name and not ref_p.exists():
                 ref_p.write_bytes(descargar(STORE.format(ref_name)))
             ev = float(evs.get(slug(modelo), 0.0)) - 0.3
             crudo, final = cache / f"{slug(modelo)}_anim", cache / f"{slug(modelo)}_anim_c"
-            env = dict(os.environ, EXPO=str(ev), HIDE=hide, KEEP=keep)
+            op = OPCIONES.get(modelo, {})
+            tex = texturas_png(usdz, cache / "texturas")
+            env = dict(os.environ, EXPO=str(ev), HIDE=hide, KEEP=keep, TEX_DIR=str(tex),
+                       INVERTIR=op.get("INVERTIR", ""), FILL=op.get("FILL", "0.78"))
             subprocess.run([blender_py, str(Path(__file__).parent / "anim_media_vuelta.py"), "--", str(usdz), str(crudo),
                             str(args.ancho), str(args.alto), str(args.cuadros), str(args.muestras)],
                            env=env, check=True, capture_output=True)
             frontal_im = Image.open(ruta_vista(modelo, "frontal"))
             fw, fh = frontal_im.size
             frontal = np.asarray(frontal_im.convert("RGBA")).astype(float) / 255
-            ref = np.asarray(Image.open(ref_p).convert("RGBA")).astype(float) / 255
-            g = calibrar_y_aplicar(sorted(crudo.glob("*.png")), ref, frontal, fw / fh, final)
+            ref = np.asarray(Image.open(ref_p).convert("RGBA")).astype(float) / 255 if ref_name else None
+            cal = op.get("calibracion", "doble")
+            if cal == "ninguna":
+                final, g = crudo, None
+            else:
+                g = calibrar_y_aplicar(sorted(crudo.glob("*.png")), ref,
+                                       frontal if cal == "doble" else None, fw / fh, final)
             codificar(final, base, args.ancho, args.alto)
             registrar(modelos, modelo, {"balance_rgb": g})
             print(f"✓ {modelo}: {base.name}.mov / .webm / _preview.mp4")
