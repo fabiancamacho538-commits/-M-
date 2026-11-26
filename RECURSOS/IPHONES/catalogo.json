@@ -2,7 +2,7 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T20:49:05+00:00",
+  "generado": "2026-11-26T21:02:55+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
@@ -715,7 +715,32 @@
         "Silver"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone13%2C3.json",
-      "modelo_confirmado_por_appledb": "iPhone 12 Pro"
+      "modelo_confirmado_por_appledb": "iPhone 12 Pro",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-12-pro/2020/e70ffbd8-50f1-40f3-ac36-0f03a15ac314/quick-look/modern/iphone_12_pro_max_pacific_blue_5G_ios14.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-pro-max-blue-2020?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Pacific Blue",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 12 Pro Max",
+          "nota": "iPhone 12 Pro y iPhone 12 Pro Max tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 12 Pro Max."
+        }
+      }
     },
     {
       "modelo": "iPhone 12 Pro Max",
@@ -831,7 +856,30 @@
         "Silver"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone13%2C4.json",
-      "modelo_confirmado_por_appledb": "iPhone 12 Pro Max"
+      "modelo_confirmado_por_appledb": "iPhone 12 Pro Max",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-12-pro/2020/e70ffbd8-50f1-40f3-ac36-0f03a15ac314/quick-look/modern/iphone_12_pro_max_pacific_blue_5G_ios14.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-pro-max-blue-2020?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Pacific Blue",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          }
+        }
+      }
     },
     {
       "modelo": "iPhone 13 mini",
