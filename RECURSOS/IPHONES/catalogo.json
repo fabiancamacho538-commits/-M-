@@ -2,7 +2,7 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T21:47:19+00:00",
+  "generado": "2026-11-26T22:01:40+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
@@ -1119,7 +1119,32 @@
         "Starlight"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C4.json",
-      "modelo_confirmado_por_appledb": "iPhone 13 mini"
+      "modelo_confirmado_por_appledb": "iPhone 13 mini",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_13/iPhone_13_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_13/iPhone_13_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_13/iPhone_13_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-13/iphone_13_green_5G_ios15.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-green-2023?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Green (el modelo 3D oficial sólo existe en verde)",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 13",
+          "nota": "iPhone 13 mini y iPhone 13 tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 13."
+        }
+      }
     },
     {
       "modelo": "iPhone 13",
@@ -1240,7 +1265,30 @@
         "Starlight"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone14%2C5.json",
-      "modelo_confirmado_por_appledb": "iPhone 13"
+      "modelo_confirmado_por_appledb": "iPhone 13",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_13/iPhone_13_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_13/iPhone_13_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_13/iPhone_13_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-13/iphone_13_green_5G_ios15.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-green-2023?scl=1&fmt=png-alpha",
+          "color_de_la_animacion": "Green (el modelo 3D oficial sólo existe en verde)",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          }
+        }
+      }
     },
     {
       "modelo": "iPhone 13 Pro",
