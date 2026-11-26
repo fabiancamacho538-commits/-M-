@@ -2,14 +2,14 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T16:58:48+00:00",
+  "generado": "2026-11-26T17:13:07+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
     "busqueda": "RECURSOS/_scripts/buscar_iphone.py"
   },
   "total_modelos": 32,
-  "total_traseras": 0,
+  "total_traseras": 23,
   "total_frontales": 32,
   "modelos": [
     {
@@ -56,6 +56,52 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 11",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_11/iPhone_11_trasera.png",
+          "resolucion": {
+            "ancho": 2004,
+            "alto": 3966,
+            "texto": "2004x3966"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 4560,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4652714,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Purple",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone11-purple-2019?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.13,
+            "pct_opaco": 97.68,
+            "pct_semitransparente": 0.19,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.98)",
+            "ancho_px": 1984.2,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone11-purple-2019",
+            "proporcion_ancho_alto": 0.5053,
+            "proporcion_frontal": 0.5062,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -129,6 +175,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_11_Pro/iPhone_11_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1808,
+            "alto": 3624,
+            "texto": "1808x3624"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 4167,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 5952001,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Midnight Green",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-11-pro-midnight-green-2019?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.17,
+            "pct_opaco": 97.31,
+            "pct_semitransparente": 0.53,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.99)",
+            "ancho_px": 1786.9,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-11-pro-midnight-green-2019",
+            "proporcion_ancho_alto": 0.4989,
+            "proporcion_frontal": 0.4996,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_11_Pro",
@@ -198,6 +290,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_11_Pro_Max/iPhone_11_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1967,
+            "alto": 3966,
+            "texto": "1967x3966"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 4560,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 6931473,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Midnight Green",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-11-pro-max-midnight-green-2019?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 1.69,
+            "pct_opaco": 97.94,
+            "pct_semitransparente": 0.37,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.99)",
+            "ancho_px": 1948.9,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-11-pro-max-midnight-green-2019",
+            "proporcion_ancho_alto": 0.496,
+            "proporcion_frontal": 0.4968,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_11_Pro_Max",
@@ -265,6 +403,52 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 12 mini",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12_mini/iPhone_12_mini_trasera.png",
+          "resolucion": {
+            "ancho": 1520,
+            "alto": 3085,
+            "texto": "1520x3085"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3547,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2981796,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Blue",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-mini-blue-2020?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.39,
+            "pct_opaco": 97.24,
+            "pct_semitransparente": 0.37,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.97)",
+            "ancho_px": 1500.2,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-12-mini-blue-2020",
+            "proporcion_ancho_alto": 0.4927,
+            "proporcion_frontal": 0.4963,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -342,6 +526,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12/iPhone_12_trasera.png",
+          "resolucion": {
+            "ancho": 1693,
+            "alto": 3442,
+            "texto": "1693x3442"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3958,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1707200,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Purple",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-purple-2021?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.34,
+            "pct_opaco": 97.28,
+            "pct_semitransparente": 0.39,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.99)",
+            "ancho_px": 1671.9,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-12-purple-2021",
+            "proporcion_ancho_alto": 0.4919,
+            "proporcion_frontal": 0.4943,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_12",
@@ -417,6 +647,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12_Pro/iPhone_12_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1690,
+            "alto": 3440,
+            "texto": "1690x3440"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3955,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2973872,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Pacific Blue",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-pro-blue-2020?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.34,
+            "pct_opaco": 97.29,
+            "pct_semitransparente": 0.37,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.97)",
+            "ancho_px": 1669.8,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-12-pro-blue-2020",
+            "proporcion_ancho_alto": 0.4913,
+            "proporcion_frontal": 0.4944,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_12_Pro",
@@ -487,6 +763,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_12_Pro_Max/iPhone_12_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1844,
+            "alto": 3766,
+            "texto": "1844x3766"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 4330,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 3502072,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Pacific Blue",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-pro-max-blue-2020?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.12,
+            "pct_opaco": 97.55,
+            "pct_semitransparente": 0.34,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.96)",
+            "ancho_px": 1823.2,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-12-pro-max-blue-2020",
+            "proporcion_ancho_alto": 0.4896,
+            "proporcion_frontal": 0.4935,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_12_Pro_Max",
@@ -555,6 +877,52 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 13 mini",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13_mini/iPhone_13_mini_trasera.png",
+          "resolucion": {
+            "ancho": 1520,
+            "alto": 3085,
+            "texto": "1520x3085"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3547,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 3468378,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Pink",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-mini-pink-2022?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.38,
+            "pct_opaco": 97.13,
+            "pct_semitransparente": 0.49,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.98)",
+            "ancho_px": 1500.0,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-13-mini-pink-2022",
+            "proporcion_ancho_alto": 0.4927,
+            "proporcion_frontal": 0.4959,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -632,6 +1000,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13/iPhone_13_trasera.png",
+          "resolucion": {
+            "ancho": 1690,
+            "alto": 3439,
+            "texto": "1690x3439"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3954,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 4675500,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Pink",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pink-2023?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.27,
+            "pct_opaco": 97.27,
+            "pct_semitransparente": 0.47,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.99)",
+            "ancho_px": 1670.0,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-13-pink-2023",
+            "proporcion_ancho_alto": 0.4914,
+            "proporcion_frontal": 0.4938,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_13",
@@ -705,6 +1119,52 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 13 Pro",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13_Pro/iPhone_13_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1690,
+            "alto": 3439,
+            "texto": "1690x3439"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3954,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 5862395,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Sierra Blue",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-blue-2023?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.27,
+            "pct_opaco": 97.23,
+            "pct_semitransparente": 0.49,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.98)",
+            "ancho_px": 1669.5,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-13-pro-blue-2023",
+            "proporcion_ancho_alto": 0.4914,
+            "proporcion_frontal": 0.4953,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -781,6 +1241,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_13_Pro_Max/iPhone_13_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1843,
+            "alto": 3767,
+            "texto": "1843x3767"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 4332,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 7149326,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Sierra Blue",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-max-blue-2023?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.08,
+            "pct_opaco": 97.42,
+            "pct_semitransparente": 0.5,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.99)",
+            "ancho_px": 1822.4,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "refurb-iphone-13-pro-max-blue-2023",
+            "proporcion_ancho_alto": 0.4892,
+            "proporcion_frontal": 0.493,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_13_Pro_Max",
@@ -853,6 +1359,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 14",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14/iPhone_14_trasera.png",
+          "resolucion": {
+            "ancho": 1175,
+            "alto": 2364,
+            "texto": "1175x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 873267,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Purple",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14/iphone_14_purple_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.48,
+            "pct_opaco": 96.06,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.14,
+            "balance_rgb": [
+              0.984,
+              1.02,
+              0.85
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-purple-select-202209?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_14_purple_5G.usdz",
+            "proporcion_ancho_alto": 0.497,
+            "proporcion_frontal": 0.4944,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -930,6 +1488,58 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14_Plus/iPhone_14_Plus_trasera.png",
+          "resolucion": {
+            "ancho": 1165,
+            "alto": 2364,
+            "texto": "1165x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 842415,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Purple",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14/iphone_14_plus_purple_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.44,
+            "pct_opaco": 96.13,
+            "pct_semitransparente": 0.43,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.14,
+            "balance_rgb": [
+              0.984,
+              1.02,
+              0.85
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-plus-purple-select-202209?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_14_plus_purple_5G.usdz",
+            "proporcion_ancho_alto": 0.4928,
+            "proporcion_frontal": 0.4916,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_14_Plus",
@@ -1005,6 +1615,58 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14_Pro/iPhone_14_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1159,
+            "alto": 2364,
+            "texto": "1159x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1458589,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Deep Purple",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_deep_purple_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.71,
+            "pct_opaco": 95.82,
+            "pct_semitransparente": 0.47,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": -0.45,
+            "balance_rgb": [
+              1.043,
+              0.996,
+              0.91
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-deeppurple-select?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_14_pro_deep_purple_5G.usdz",
+            "proporcion_ancho_alto": 0.4903,
+            "proporcion_frontal": 0.491,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_14_Pro",
@@ -1073,6 +1735,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 14 Pro Max",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_14_Pro_Max/iPhone_14_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1173,
+            "alto": 2364,
+            "texto": "1173x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1343817,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Deep Purple",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_max_deep_purple_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.41,
+            "pct_opaco": 96.15,
+            "pct_semitransparente": 0.44,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": -0.47,
+            "balance_rgb": [
+              1.043,
+              0.996,
+              0.915
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-deeppurple-select?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_14_pro_max_deep_purple_5G.usdz",
+            "proporcion_ancho_alto": 0.4962,
+            "proporcion_frontal": 0.4887,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -1145,6 +1859,58 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15/iPhone_15_trasera.png",
+          "resolucion": {
+            "ancho": 1174,
+            "alto": 2364,
+            "texto": "1174x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 807930,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Pink",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_pink_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.69,
+            "pct_opaco": 95.87,
+            "pct_semitransparente": 0.45,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.34,
+            "balance_rgb": [
+              0.962,
+              1.02,
+              0.918
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pink-select-202309?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_15_pink_5G.usdz",
+            "proporcion_ancho_alto": 0.4966,
+            "proporcion_frontal": 0.4921,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_15",
@@ -1213,6 +1979,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 15 Plus",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15_Plus/iPhone_15_Plus_trasera.png",
+          "resolucion": {
+            "ancho": 1161,
+            "alto": 2364,
+            "texto": "1161x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 781984,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Pink",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_plus_pink_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.42,
+            "pct_opaco": 96.13,
+            "pct_semitransparente": 0.45,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.34,
+            "balance_rgb": [
+              0.966,
+              1.019,
+              0.915
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-15-plus-pink-202412?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_15_plus_pink_5G.usdz",
+            "proporcion_ancho_alto": 0.4911,
+            "proporcion_frontal": 0.4894,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -1285,6 +2103,58 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15_Pro/iPhone_15_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1156,
+            "alto": 2364,
+            "texto": "1156x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1970775,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Natural Titanium",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15-pro/iphone_15_pro_natural_titanium_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.47,
+            "pct_opaco": 96.08,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.46,
+            "balance_rgb": [
+              1.001,
+              1.002,
+              0.978
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-15-pro-naturaltitanium-202412?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_15_pro_natural_titanium_5G.usdz",
+            "proporcion_ancho_alto": 0.489,
+            "proporcion_frontal": 0.4868,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_15_Pro",
@@ -1352,6 +2222,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 15 Pro Max",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_15_Pro_Max/iPhone_15_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1151,
+            "alto": 2364,
+            "texto": "1151x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 2006191,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Natural Titanium",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15-pro/iphone_15_pro_max_natural_titanium_5G.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.18,
+            "pct_opaco": 96.36,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.47,
+            "balance_rgb": [
+              1.002,
+              1.002,
+              0.977
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-15-pro-max-naturaltitanium-202412?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone_15_pro_max_natural_titanium_5G.usdz",
+            "proporcion_ancho_alto": 0.4869,
+            "proporcion_frontal": 0.4848,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -1907,6 +2829,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17_Pro/iPhone_17_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1478,
+            "alto": 3052,
+            "texto": "1478x3052"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3509,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 8637251,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Cosmic Orange",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-cosmicorange-202509?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.68,
+            "pct_opaco": 96.93,
+            "pct_semitransparente": 0.39,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.70) + borde por salto de luminancia",
+            "ancho_px": 1459.1,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-17-pro-finish-select-cosmicorange-202509",
+            "proporcion_ancho_alto": 0.4843,
+            "proporcion_frontal": 0.4857,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_17_Pro",
@@ -1973,6 +2941,52 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 17 Pro Max",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17_Pro_Max/iPhone_17_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1601,
+            "alto": 3326,
+            "texto": "1601x3326"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3824,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 10185617,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Cosmic Orange",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-max-finish-select-cosmicorange-202509?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.41,
+            "pct_opaco": 97.24,
+            "pct_semitransparente": 0.35,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.70) + borde por salto de luminancia",
+            "ancho_px": 1582.4,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-17-pro-max-finish-select-cosmicorange-202509",
+            "proporcion_ancho_alto": 0.4814,
+            "proporcion_frontal": 0.4826,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -2110,6 +3124,52 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_18_Pro/iPhone_18_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1461,
+            "alto": 3036,
+            "texto": "1461x3036"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3491,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 7241207,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Burgundy",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-finish-select-burgundy-202609?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.7,
+            "pct_opaco": 97.02,
+            "pct_semitransparente": 0.28,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.57) + borde por salto de luminancia",
+            "ancho_px": 1442.5,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-18-pro-finish-select-burgundy-202609",
+            "proporcion_ancho_alto": 0.4812,
+            "proporcion_frontal": 0.4837,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_18_Pro",
@@ -2177,6 +3237,52 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 18 Pro Max (US)",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1587,
+            "alto": 3315,
+            "texto": "1587x3315"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 3812,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 8578051,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Burgundy",
+          "metodo": "Recorte de la imagen oficial de la Apple Store (la trasera aparece completa, delante del frente)",
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-max-finish-select-burgundy-202609?scl=1&fmt=png-alpha",
+          "fuente": "Apple Store (store.storeimages.cdn-apple.com)",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 2.42,
+            "pct_opaco": 97.27,
+            "pct_semitransparente": 0.31,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "metodo_eje": "perfil del marco (r=0.60) + borde por salto de luminancia",
+            "ancho_px": 1568.0,
+            "botones_lado_derecho": "recortados al ras del marco (en la composición quedaban sobre el frente)",
+            "modificaciones_de_contenido": "Ninguna: sólo recorte y máscara; todos los píxeles visibles son de Apple",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-18-pro-max-finish-select-burgundy-202609",
+            "proporcion_ancho_alto": 0.4787,
+            "proporcion_frontal": 0.4813,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -2300,6 +3406,51 @@
       "modelo": "iPhone 11 Plus / 12 Plus / 13 Plus",
       "motivo": "No existen: la variante Plus empezó con el iPhone 14.",
       "vista": "modelo"
+    },
+    {
+      "modelo": "iPhone 16",
+      "vista": "trasera",
+      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+    },
+    {
+      "modelo": "iPhone 16 Plus",
+      "vista": "trasera",
+      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+    },
+    {
+      "modelo": "iPhone 16 Pro",
+      "vista": "trasera",
+      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+    },
+    {
+      "modelo": "iPhone 16 Pro Max",
+      "vista": "trasera",
+      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+    },
+    {
+      "modelo": "iPhone 16e",
+      "vista": "trasera",
+      "motivo": "En las imágenes oficiales de la Apple Store el frente tapa parte de la trasera y el modelo 3D oficial (AR) renderiza el vidrio blanco con un tono gris/oliva que no coincide con la foto oficial. Las fotos de prensa de Apple Newsroom prohíben modificarlas."
+    },
+    {
+      "modelo": "iPhone 17",
+      "vista": "trasera",
+      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+    },
+    {
+      "modelo": "iPhone Air",
+      "vista": "trasera",
+      "motivo": "falta BLENDER_PY (Python con el módulo bpy) para renderizar"
+    },
+    {
+      "modelo": "iPhone 17e",
+      "vista": "trasera",
+      "motivo": "Mismo caso que el 16e: el frente tapa la trasera en la imagen oficial y el modelo 3D no reproduce fielmente el color Soft Pink."
+    },
+    {
+      "modelo": "iPhone Duo",
+      "vista": "trasera",
+      "motivo": "Plegable: Apple solo publica la composición abierta/cerrada y el modelo 3D en Star White (no en Night Sky); no hay una vista trasera individual fiable."
     }
   ]
 }
