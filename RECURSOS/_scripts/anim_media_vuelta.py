@@ -69,7 +69,7 @@ if tex_dir:
     for im in list(bpy.data.images):
         stem, ext = os.path.splitext(im.name)
         png = os.path.join(tex_dir, stem + '.png')
-        if ext.lower() == '.heic' and os.path.exists(png):
+        if ext.lower() in ('.heic', '.avif') and os.path.exists(png):
             nuevo = bpy.data.images.load(png)
             nuevo.colorspace_settings.name = im.colorspace_settings.name
             reempl[im.name] = nuevo
@@ -125,7 +125,7 @@ for o in roots:
 cam_d = bpy.data.cameras.new('cam'); cam_d.lens = 85; cam_d.sensor_fit = 'VERTICAL'; cam_d.sensor_height = 24
 cam = bpy.data.objects.new('cam', cam_d); sc.collection.objects.link(cam); sc.camera = cam
 vfov = 2 * math.atan(cam_d.sensor_height / (2 * cam_d.lens))
-D = (Hh / 0.78) / (2 * math.tan(vfov / 2))
+D = (Hh / float(os.environ.get('FILL', '0.78'))) / (2 * math.tan(vfov / 2))  # FILL: fracción de la altura del cuadro
 incl = math.radians(float(os.environ.get('INCL', '4')))
 c = mathutils.Vector(ctr)
 cam.location = c + front_v * D * math.cos(incl) + mathutils.Vector((0, 0, D * math.sin(incl)))
