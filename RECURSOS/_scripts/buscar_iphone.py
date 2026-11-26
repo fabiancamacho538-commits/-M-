@@ -104,7 +104,7 @@ def resolver_modelo(nombre: str, catalogo: dict | None = None, vista: str = "tra
                 # animación 3D media vuelta (pantalla -> trasera), si existe para el modelo
                 "animacion_media_vuelta": ({k: v for k, v in e["animaciones"]["media_vuelta"].items()
                                             if k in ("mov_prores4444_alfa", "webm_vp9_alfa", "preview_mp4",
-                                                     "resolucion", "fps", "duracion_s")}
+                                                     "resolucion", "fps", "duracion_s", "animacion_del_gemelo")}
                                            if e.get("animaciones", {}).get("media_vuelta") else None)}
     motivo = "No está en la biblioteca."
     for nd in cat.get("no_disponibles", []):

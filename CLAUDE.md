@@ -58,8 +58,10 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
    para Premiere/Final Cut/DaVinci/After Effects, o la `.webm` (VP9 con alfa) para HTML, Remotion o
    HyperFrames. Dura 1,6 s (48 cuadros a 30 fps, 1080×1920): arranca con la pantalla y termina en la
    trasera. Para que quede quieto al final, congelá el último cuadro; para ir de la trasera a la
-   pantalla, reproducila en reversa. Si el modelo no tiene animación, simulá el giro con las dos
-   imágenes (ver "Giro trasera → frontal" más abajo).
+   pantalla, reproducila en reversa. Los modelos con el mismo diseño que otro (Pro ↔ Pro Max,
+   Plus ↔ base, mini ↔ base) comparten la animación del gemelo: el buscador lo indica con
+   `animacion_del_gemelo`, y es la decisión del usuario usarla así. Si el modelo no tiene animación,
+   simulá el giro con las dos imágenes (ver "Giro trasera → frontal" más abajo).
 5. **No modificar los archivos de la biblioteca.** Trabajá sobre copias en la carpeta del proyecto de video.
 
 ### Cómo usar las imágenes en motion graphics

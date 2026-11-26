@@ -106,6 +106,32 @@ def codificar(frames_dir: Path, base: Path, ancho: int, alto: int) -> None:
         "-movflags", "+faststart", f"{base}_preview.mp4")
 
 
+# Modelos con el mismo diseño que otro (sólo cambia el tamaño): usan la animación de su gemelo.
+GEMELOS = {
+    "iPhone 11 Pro Max": "iPhone 11 Pro",
+    "iPhone 12 mini": "iPhone 12", "iPhone 12 Pro": "iPhone 12 Pro Max",
+    "iPhone 13 mini": "iPhone 13", "iPhone 13 Pro": "iPhone 13 Pro Max",
+    "iPhone 14 Plus": "iPhone 14", "iPhone 14 Pro": "iPhone 14 Pro Max",
+    "iPhone 15 Plus": "iPhone 15", "iPhone 16 Plus": "iPhone 16",
+    "iPhone 17 Pro": "iPhone 17 Pro Max", "iPhone 18 Pro": "iPhone 18 Pro Max",
+}
+
+
+def registrar_gemelos(modelos: dict) -> int:
+    n = 0
+    for modelo, gemelo in GEMELOS.items():
+        anim = modelos.get(gemelo, {}).get("animaciones", {}).get("media_vuelta")
+        propio = ruta_vista(modelo, "trasera").parent / f"{slug(modelo)}_media_vuelta.webm"
+        if anim and not propio.exists():
+            e = dict(anim)
+            e["animacion_del_gemelo"] = gemelo
+            e["nota"] = (f"{modelo} y {gemelo} tienen el mismo diseño (sólo cambia el tamaño): "
+                         f"se usa la animación del {gemelo}.")
+            modelos.setdefault(modelo, {"modelo": modelo}).setdefault("animaciones", {})["media_vuelta"] = e
+            n += 1
+    return n
+
+
 def registrar(modelos: dict, modelo: str, info: dict | None = None) -> bool:
     base = ruta_vista(modelo, "trasera").parent / f"{slug(modelo)}_media_vuelta"
     mov, webm, prev = Path(f"{base}.mov"), Path(f"{base}.webm"), Path(f"{base}_preview.mp4")
@@ -158,7 +184,8 @@ def main() -> int:
     args = ap.parse_args()
     cache = Path(args.cache); cache.mkdir(parents=True, exist_ok=True)
     fuentes = fuentes_3d()
-    lista = [m.strip() for m in args.modelos.split(",")] if args.modelos else [m[0] for m in MODELOS if m[0] in fuentes]
+    lista = ([m.strip() for m in args.modelos.split(",")] if args.modelos
+             else [m[0] for m in MODELOS if m[0] in fuentes and m[0] not in GEMELOS])
     blender_py = os.environ.get("BLENDER_PY")
     evs = json.loads(Path(args.ev_json).read_text()) if args.ev_json else {}
 
@@ -194,6 +221,7 @@ def main() -> int:
             print(f"✓ {modelo}: {base.name}.mov / .webm / _preview.mp4")
         else:
             registrar(modelos, modelo)
+    registrar_gemelos(modelos)
     no_disp = json.loads((Path(__file__).parents[1] / "IPHONES" / "catalogo.json").read_text()).get("no_disponibles", [])
     guardar_catalogo(modelos, no_disp)
     n = sum(1 for m in modelos.values() if "animaciones" in m)

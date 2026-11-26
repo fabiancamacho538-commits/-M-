@@ -2,7 +2,7 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T19:45:33+00:00",
+  "generado": "2026-11-26T19:51:42+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
@@ -1689,7 +1689,31 @@
         "Space Black"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone15%2C2.json",
-      "modelo_confirmado_por_appledb": "iPhone 14 Pro"
+      "modelo_confirmado_por_appledb": "iPhone 14 Pro",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_14_Pro_Max/iPhone_14_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_14_Pro_Max/iPhone_14_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_14_Pro_Max/iPhone_14_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_max_deep_purple_5G.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-deeppurple-select?scl=1&fmt=png-alpha",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 14 Pro Max",
+          "nota": "iPhone 14 Pro y iPhone 14 Pro Max tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 14 Pro Max."
+        }
+      }
     },
     {
       "modelo": "iPhone 14 Pro Max",
@@ -2099,7 +2123,31 @@
         "Yellow"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone15%2C5.json",
-      "modelo_confirmado_por_appledb": "iPhone 15 Plus"
+      "modelo_confirmado_por_appledb": "iPhone 15 Plus",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_15/iPhone_15_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_15/iPhone_15_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_15/iPhone_15_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_pink_5G.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pink-select-202309?scl=1&fmt=png-alpha",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 15",
+          "nota": "iPhone 15 Plus y iPhone 15 tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 15."
+        }
+      }
     },
     {
       "modelo": "iPhone 15 Pro",
@@ -2547,7 +2595,31 @@
         "White"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone17%2C4.json",
-      "modelo_confirmado_por_appledb": "iPhone 16 Plus"
+      "modelo_confirmado_por_appledb": "iPhone 16 Plus",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_16/iPhone_16_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_16/iPhone_16_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_16/iPhone_16_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16/iphone-16-ultramarine-no-sim.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-ultramarine-select-202409?scl=1&fmt=png-alpha",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 16",
+          "nota": "iPhone 16 Plus y iPhone 16 tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 16."
+        }
+      }
     },
     {
       "modelo": "iPhone 16 Pro",
