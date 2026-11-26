@@ -6,7 +6,8 @@ Se ejecuta con el Python de Blender (módulo bpy):
     blenv/bin/python anim_media_vuelta.py -- modelo.usdz carpeta_frames/ [ancho alto frames muestras]
 
 Variables de entorno: EXPO (exposición en stops), HIDE (mallas a ocultar, separadas por coma),
-KEEP (en archivos con dos equipos, el objeto raíz del que se anima), FRAME (sólo ese cuadro, para pruebas), GIRO (grados, por defecto 180), INCL (inclinación
+KEEP (en archivos con dos equipos, el objeto raíz del que se anima), TEX_DIR (PNG de las texturas HEIC),
+INVERTIR (invierte la detección pantalla/trasera), FRAME (sólo ese cuadro, para pruebas), GIRO (grados, por defecto 180), INCL (inclinación
 de cámara en grados, por defecto 4).
 """
 import sys, os, math
@@ -24,6 +25,29 @@ os.makedirs(outdir, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.wm.usd_import(filepath=src)
 sc = bpy.context.scene
+# algunos modelos AR traen animación propia (Transform Cache / Mesh Sequence Cache): se congela
+sc.frame_set(0)
+bpy.context.view_layer.update()
+mundo = {o.name: o.matrix_world.copy() for o in sc.objects}
+for o in sc.objects:
+    for c in list(o.constraints):
+        if c.type == 'TRANSFORM_CACHE':
+            o.constraints.remove(c)
+    for m in list(getattr(o, 'modifiers', [])):
+        if m.type == 'MESH_SEQUENCE_CACHE':
+            o.modifiers.remove(m)
+    o.animation_data_clear()
+
+
+def _prof(o):
+    n = 0
+    while o.parent: o = o.parent; n += 1
+    return n
+
+
+for o in sorted(sc.objects, key=_prof):  # padres primero
+    o.matrix_world = mundo[o.name]
+    bpy.context.view_layer.update()
 
 
 def verts(o):
@@ -34,9 +58,26 @@ def verts(o):
 allm = [o for o in sc.objects if o.type == 'MESH']
 big = [o for o in allm if len(o.data.vertices) > 200]
 ref_h = max(max(o.dimensions) for o in big)
-for o in allm:  # cajas/planos auxiliares de AR
-    if len(o.data.vertices) <= 64 and max(o.dimensions) > ref_h * 1.05:
+for o in allm:  # cajas/planos auxiliares de AR (más grandes que el equipo, o volúmenes no planos)
+    d = sorted(o.dimensions)
+    if (len(o.data.vertices) <= 64 and d[2] > ref_h * 1.05) or d[0] > ref_h * 0.3:
         o.hide_render = True
+# texturas HEIC (Blender no las lee): usar las versiones PNG convertidas en TEX_DIR
+tex_dir = os.environ.get('TEX_DIR')
+if tex_dir:
+    reempl = {}
+    for im in list(bpy.data.images):
+        stem, ext = os.path.splitext(im.name)
+        png = os.path.join(tex_dir, stem + '.png')
+        if ext.lower() == '.heic' and os.path.exists(png):
+            nuevo = bpy.data.images.load(png)
+            nuevo.colorspace_settings.name = im.colorspace_settings.name
+            reempl[im.name] = nuevo
+    for mat in bpy.data.materials:  # las HEIC vienen empaquetadas: se cambia la imagen del nodo
+        if mat.use_nodes:
+            for nd in mat.node_tree.nodes:
+                if nd.type == 'TEX_IMAGE' and nd.image and nd.image.name in reempl:
+                    nd.image = reempl[nd.image.name]
 for o in allm:
     if o.name in os.environ.get('HIDE', '').split(','):
         o.hide_render = True
@@ -66,12 +107,16 @@ ax = 0 if ext[0] < ext[1] else 1
 b0, b1 = np.percentile(mid[:, ax], 0.5), np.percentile(mid[:, ax], 99.5)
 back_neg = (b0 - top[:, ax].min()) > (top[:, ax].max() - b1)
 # dirección hacia la que mira la PANTALLA (opuesta a las cámaras)
+if os.environ.get('INVERTIR'):  # modelos con geometría frontal que confunde la detección
+    back_neg = not back_neg
 front = np.zeros(3); front[ax] = 1.0 if back_neg else -1.0
 front_v = mathutils.Vector(front)
+
 
 # pivote en el centro del equipo: todo cuelga de él y gira sobre Z
 piv = bpy.data.objects.new('pivote', None); sc.collection.objects.link(piv)
 piv.location = mathutils.Vector(ctr)
+bpy.context.view_layer.update()  # el pivote debe tener su posición antes de colgarle el equipo
 roots = [o for o in sc.objects if o.parent is None and o is not piv]
 for o in roots:
     mw = o.matrix_world.copy(); o.parent = piv; o.matrix_world = mw
@@ -137,6 +182,15 @@ else: frames = range(sc.frame_start, sc.frame_end + 1)
 import time
 for f in frames:
     sc.frame_set(f)
+    if os.environ.get('DEBUG'):
+        bpy.context.view_layer.update()
+        W_ = np.concatenate([verts(o) for o in meshes])
+        print('DBG frame', f, 'bbox_mm', [round(float(v)*1000, 1) for v in W_.min(0)], [round(float(v)*1000, 1) for v in W_.max(0)],
+              'cam', [round(v*1000, 1) for v in cam.location], flush=True)
+        for im in bpy.data.images:
+            if im.name.lower().endswith('.heic'):
+                print('DBG img', im.name, im.filepath, 'packed', bool(im.packed_file), 'size', tuple(im.size), flush=True)
+                break
     r.filepath = os.path.join(outdir, f'{f:04d}.png')
     t0 = time.time(); bpy.ops.render.render(write_still=True); print('FRAME', f, round(time.time() - t0, 1), 's', flush=True)
 print('OK', outdir, len(list(frames)), 'frames', RW, RH)
