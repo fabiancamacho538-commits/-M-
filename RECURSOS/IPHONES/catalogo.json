@@ -2,14 +2,14 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T22:41:31+00:00",
+  "generado": "2026-11-26T23:06:07+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
     "busqueda": "RECURSOS/_scripts/buscar_iphone.py"
   },
   "total_modelos": 32,
-  "total_traseras": 23,
+  "total_traseras": 31,
   "total_frontales": 32,
   "modelos": [
     {
@@ -2798,6 +2798,58 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16/iPhone_16_trasera.png",
+          "resolucion": {
+            "ancho": 1171,
+            "alto": 2364,
+            "texto": "1171x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 967788,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Ultramarine",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16/iphone-16-ultramarine-no-sim.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.53,
+            "pct_opaco": 96.01,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 2.386811864090971,
+            "balance_rgb": [
+              0.94,
+              1.016,
+              1.015
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-ultramarine-select-202409?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-16-ultramarine-no-sim.usdz",
+            "proporcion_ancho_alto": 0.4953,
+            "proporcion_frontal": 0.4905,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_16",
@@ -2889,6 +2941,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 16 Plus",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16_Plus/iPhone_16_Plus_trasera.png",
+          "resolucion": {
+            "ancho": 1162,
+            "alto": 2364,
+            "texto": "1162x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 916757,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Ultramarine",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16/iphone-16-plus-ultramarine-no-sim.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.23,
+            "pct_opaco": 96.3,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 2.423099440889454,
+            "balance_rgb": [
+              0.94,
+              1.017,
+              1.012
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-plus-ultramarine-select-202409?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-16-plus-ultramarine-no-sim.usdz",
+            "proporcion_ancho_alto": 0.4915,
+            "proporcion_frontal": 0.4887,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -2986,6 +3090,58 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16_Pro/iPhone_16_Pro_trasera.png",
+          "resolucion": {
+            "ancho": 1149,
+            "alto": 2364,
+            "texto": "1149x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1377758,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Desert Titanium",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16-pro/iphone-16-pro-no-sim-desert-titanium.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.52,
+            "pct_opaco": 96.03,
+            "pct_semitransparente": 0.45,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 1.0514207535147408,
+            "balance_rgb": [
+              0.932,
+              0.998,
+              1.18
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-deserttitanium-select?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-16-pro-no-sim-desert-titanium.usdz",
+            "proporcion_ancho_alto": 0.486,
+            "proporcion_frontal": 0.4841,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_16_Pro",
@@ -3076,6 +3232,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 16 Pro Max",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16_Pro_Max/iPhone_16_Pro_Max_trasera.png",
+          "resolucion": {
+            "ancho": 1142,
+            "alto": 2364,
+            "texto": "1142x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1353102,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Desert Titanium",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2024/1db11f29-1385-4ae5-bbfd-2c885f4463d4/iphone-16-pro/iphone-16-pro-max-no-sim-desert-titanium.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.27,
+            "pct_opaco": 96.26,
+            "pct_semitransparente": 0.47,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 1.0855419486689066,
+            "balance_rgb": [
+              0.931,
+              0.998,
+              1.18
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-max-deserttitanium-select?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-16-pro-max-no-sim-desert-titanium.usdz",
+            "proporcion_ancho_alto": 0.4831,
+            "proporcion_frontal": 0.4817,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -3170,6 +3378,59 @@
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
             "fecha": "2026-11-26"
           }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_16e/iPhone_16e_trasera.png",
+          "resolucion": {
+            "ancho": 1177,
+            "alto": 2364,
+            "texto": "1177x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 378530,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "White",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2025/aa5fba56-f772-4712-9d4c-0516416169e3/iphone-16e/iphone16_e_white.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.32,
+            "pct_opaco": 96.22,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 2.3961372468912923,
+            "balance_rgb": [
+              0.915,
+              1.004,
+              1.18
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16e-white-select-202502?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)",
+            "ajuste_extra": "Saturación al 25 % para quitar el tinte de los reflejos del estudio (el 16e blanco es un blanco neutro)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone16_e_white.usdz",
+            "proporcion_ancho_alto": 0.4979,
+            "proporcion_frontal": 0.4905,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
         }
       },
       "carpeta": "RECURSOS/IPHONES/iPhone_16e",
@@ -3258,6 +3519,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 17",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17/iPhone_17_trasera.png",
+          "resolucion": {
+            "ancho": 1146,
+            "alto": 2364,
+            "texto": "1146x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1434954,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Lavender",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone-17/2025/b2c72de3-1cbc-4e24-b4d3-23c7abcec4ec/ar/iphone-17-e-sim.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.62,
+            "pct_opaco": 95.94,
+            "pct_semitransparente": 0.45,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.7589655188303113,
+            "balance_rgb": [
+              0.858,
+              1.019,
+              1.18
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-lavender-202509?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-17-e-sim.usdz",
+            "proporcion_ancho_alto": 0.4848,
+            "proporcion_frontal": 0.4831,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -3351,6 +3664,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone Air",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_Air/iPhone_Air_trasera.png",
+          "resolucion": {
+            "ancho": 1148,
+            "alto": 2364,
+            "texto": "1148x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1114562,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Sky Blue",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone-air/2025/731189b1-a606-493f-afa4-7c766a8fd08d/ar/iphone-air-e-sim.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.41,
+            "pct_opaco": 96.13,
+            "pct_semitransparente": 0.47,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 0.3413143125745808,
+            "balance_rgb": [
+              1.069,
+              0.992,
+              0.875
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-air-finish-select-skyblue-202509?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "IJtRUXYEEXnnqxn",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-air-e-sim.usdz",
+            "proporcion_ancho_alto": 0.4856,
+            "proporcion_frontal": 0.4852,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -3719,6 +4084,58 @@
           "verificado": {
             "modelo_confirmado_por_appledb": "iPhone 17e",
             "revision_visual": "OK: fondo de pantalla y diseño corresponden al modelo",
+            "fecha": "2026-11-26"
+          }
+        },
+        "trasera": {
+          "ruta": "RECURSOS/IPHONES/iPhone_17e/iPhone_17e_trasera.png",
+          "resolucion": {
+            "ancho": 1169,
+            "alto": 2364,
+            "texto": "1169x2364"
+          },
+          "resolucion_limitada": false,
+          "alto_maximo_en_video_px": 2718,
+          "formato": "PNG",
+          "modo_color": "RGBA",
+          "peso_bytes": 1371575,
+          "perspectiva": "Trasera, vista ortogonal (de frente a la tapa trasera)",
+          "color": "Soft Pink",
+          "metodo": "Render del modelo 3D oficial de Apple (AR Quick Look) con color calibrado contra la foto oficial de la Apple Store",
+          "url_original": "https://www.apple.com/105/media/us/iphone/shared/ar/2026/44fa1631-e6c3-4596-b59b-0d58f7e8735c/iphone-17e/iphone-17e-e-sim-soft-pink.usdz",
+          "fuente": "apple.com — modelo 3D de AR Quick Look",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.33,
+            "pct_opaco": 96.21,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "procesado": {
+            "render": "Blender Cycles, cámara ortográfica, fondo transparente",
+            "exposicion_ev": 2.3682217789919013,
+            "balance_rgb": [
+              0.945,
+              0.996,
+              1.18
+            ],
+            "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17e-finish-select-softpink-202603?scl=1&fmt=png-alpha",
+            "mallas_ocultas": "automático (cajas auxiliares de AR y duplicados)",
+            "modificaciones_de_contenido": "Render del modelo 3D oficial; color calibrado contra la foto oficial",
+            "optimizacion": "oxipng nivel 3 (sin pérdida)"
+          },
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "verificado": {
+            "modelo_en_nombre_de_archivo_de_apple": "iphone-17e-e-sim-soft-pink.usdz",
+            "proporcion_ancho_alto": 0.4945,
+            "proporcion_frontal": 0.4905,
+            "revision_visual": "OK: cámaras, logo, color y bordes corresponden al modelo",
             "fecha": "2026-11-26"
           }
         }
@@ -4166,49 +4583,9 @@
       "vista": "modelo"
     },
     {
-      "modelo": "iPhone 16",
-      "vista": "trasera",
-      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
-    },
-    {
-      "modelo": "iPhone 16 Plus",
-      "vista": "trasera",
-      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
-    },
-    {
-      "modelo": "iPhone 16 Pro",
-      "vista": "trasera",
-      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
-    },
-    {
-      "modelo": "iPhone 16 Pro Max",
-      "vista": "trasera",
-      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
-    },
-    {
-      "modelo": "iPhone 16e",
-      "vista": "trasera",
-      "motivo": "En las imágenes oficiales de la Apple Store el frente tapa parte de la trasera y el modelo 3D oficial (AR) renderiza el vidrio blanco con un tono gris/oliva que no coincide con la foto oficial. Las fotos de prensa de Apple Newsroom prohíben modificarlas."
-    },
-    {
-      "modelo": "iPhone 17",
-      "vista": "trasera",
-      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
-    },
-    {
-      "modelo": "iPhone Air",
-      "vista": "trasera",
-      "motivo": "Pendiente: el render de la trasera desde el modelo 3D oficial se pausó para priorizar las animaciones de media vuelta. Se completa con traseras_iphones.py (requiere BLENDER_PY)."
-    },
-    {
-      "modelo": "iPhone 17e",
-      "vista": "trasera",
-      "motivo": "Mismo caso que el 16e: el frente tapa la trasera en la imagen oficial y el modelo 3D no reproduce fielmente el color Soft Pink."
-    },
-    {
       "modelo": "iPhone Duo",
       "vista": "trasera",
-      "motivo": "Plegable: Apple solo publica la composición abierta/cerrada y el modelo 3D en Star White (no en Night Sky); no hay una vista trasera individual fiable."
+      "motivo": "Plegable: Apple sólo publica la composición abierta y el modelo 3D en Star White (no en Night Sky). La trasera se ve completa al final de su animación de media vuelta (iPhone_Duo_media_vuelta.*)."
     }
   ]
 }

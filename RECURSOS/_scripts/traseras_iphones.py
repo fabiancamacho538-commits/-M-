@@ -77,6 +77,10 @@ TRASERAS = {
     "iPhone 16 Plus":    ("3d", f"{_S24}/iphone-16/iphone-16-plus-ultramarine-no-sim.usdz", "iphone-16-plus-ultramarine-select-202409", ""),
     "iPhone 16 Pro":     ("3d", f"{_S24}/iphone-16-pro/iphone-16-pro-no-sim-desert-titanium.usdz", "iphone-16-pro-deserttitanium-select", ""),
     "iPhone 16 Pro Max": ("3d", f"{_S24}/iphone-16-pro/iphone-16-pro-max-no-sim-desert-titanium.usdz", "iphone-16-pro-max-deserttitanium-select", ""),
+    "iPhone 16e":        ("3d", "iphone/shared/ar/2025/aa5fba56-f772-4712-9d4c-0516416169e3/iphone-16e/iphone16_e_white.usdz",
+                          "iphone-16e-white-select-202502", ""),
+    "iPhone 17e":        ("3d", "iphone/shared/ar/2026/44fa1631-e6c3-4596-b59b-0d58f7e8735c/iphone-17e/iphone-17e-e-sim-soft-pink.usdz",
+                          "iphone-17e-finish-select-softpink-202603", ""),
     "iPhone 17":         ("3d", "iphone-17/2025/b2c72de3-1cbc-4e24-b4d3-23c7abcec4ec/ar/iphone-17-e-sim.usdz", "iphone-17-finish-select-lavender-202509", ""),
     "iPhone Air":        ("3d", "iphone-air/2025/731189b1-a606-493f-afa4-7c766a8fd08d/ar/iphone-air-e-sim.usdz", "iphone-air-finish-select-skyblue-202509", "IJtRUXYEEXnnqxn"),
     "iPhone 17 Pro":     ("2d", "iphone-17-pro-finish-select-cosmicorange-202509", None, ""),
@@ -87,13 +91,9 @@ TRASERAS = {
 
 # Traseras que no se pudieron obtener con calidad suficiente (se informan en el catálogo).
 TRASERAS_NO_DISPONIBLES = {
-    "iPhone 16e": "En las imágenes oficiales de la Apple Store el frente tapa parte de la trasera y el "
-                  "modelo 3D oficial (AR) renderiza el vidrio blanco con un tono gris/oliva que no "
-                  "coincide con la foto oficial. Las fotos de prensa de Apple Newsroom prohíben modificarlas.",
-    "iPhone 17e": "Mismo caso que el 16e: el frente tapa la trasera en la imagen oficial y el modelo 3D "
-                  "no reproduce fielmente el color Soft Pink.",
-    "iPhone Duo": "Plegable: Apple solo publica la composición abierta/cerrada y el modelo 3D en Star White "
-                  "(no en Night Sky); no hay una vista trasera individual fiable.",
+    "iPhone Duo": "Plegable: Apple sólo publica la composición abierta y el modelo 3D en Star White (no en "
+                  "Night Sky). La trasera se ve completa al final de su animación de media vuelta "
+                  "(iPhone_Duo_media_vuelta.*).",
 }
 
 LICENCIA_TRASERA = {
