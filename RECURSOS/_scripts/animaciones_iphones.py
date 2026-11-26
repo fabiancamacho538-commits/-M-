@@ -48,19 +48,37 @@ def fuentes_3d() -> dict:
     return d
 
 
-def calibrar_y_aplicar(frames: list[Path], ref: np.ndarray, ratio: float, outdir: Path) -> list:
-    last = np.asarray(Image.open(frames[-1]).convert("RGBA")).astype(float) / 255
-    cr = color_parche(ref, caja_trasera(ref[..., 3], ratio, True))
-    cn = color_parche(last, caja_trasera(last[..., 3], ratio, False))
+def _ganancias(cr: np.ndarray, cn: np.ndarray) -> np.ndarray:
     g = cr / cn
     lum = (cr @ Y709) / (cn @ Y709)
-    g = np.clip(g / (g @ Y709), 0.85, 1.18) * np.clip(lum, 0.6, 1.6)
+    return np.clip(g / (g @ Y709), 0.85, 1.18) * np.clip(lum, 0.6, 1.6)
+
+
+def _parche_pantalla(a: np.ndarray) -> np.ndarray:
+    al = a[..., 3]
+    cols = np.where(al.max(0) > 0.5)[0]; rows = np.where(al.max(1) > 0.5)[0]
+    x0, W, y0, H = cols[0], cols[-1] - cols[0], rows[0], rows[-1] - rows[0]
+    p = a[int(y0 + 0.25 * H):int(y0 + 0.75 * H), int(x0 + 0.25 * W):int(x0 + 0.75 * W)]
+    return s2l(p[..., :3][p[..., 3] > 0.98]).mean(0)
+
+
+def calibrar_y_aplicar(frames: list[Path], ref: np.ndarray, frontal: np.ndarray, ratio: float, outdir: Path) -> dict:
+    """Calibra los dos extremos: el cuadro inicial (pantalla) contra la imagen frontal oficial y el
+    cuadro final (trasera) contra la foto oficial; en el medio interpola mientras el equipo está de canto."""
+    rgba = lambda f: np.asarray(Image.open(f).convert("RGBA")).astype(float) / 255
+    first, last = rgba(frames[0]), rgba(frames[-1])
+    gb = _ganancias(color_parche(ref, caja_trasera(ref[..., 3], ratio, True)),
+                    color_parche(last, caja_trasera(last[..., 3], ratio, False)))
+    gf = _ganancias(_parche_pantalla(frontal), _parche_pantalla(first))
     outdir.mkdir(parents=True, exist_ok=True)
-    for f in frames:
-        a = np.asarray(Image.open(f).convert("RGBA")).astype(float) / 255
+    n = len(frames) - 1
+    for i, f in enumerate(frames):
+        t = float(np.clip((i / n - 0.35) / 0.30, 0, 1)); w = t * t * (3 - 2 * t)
+        g = np.exp((1 - w) * np.log(gf) + w * np.log(gb))
+        a = rgba(f)
         rgb = l2s(np.clip(s2l(a[..., :3]) * g, 0, 1))
         Image.fromarray((np.dstack([rgb, a[..., 3]]) * 255).round().clip(0, 255).astype(np.uint8), "RGBA").save(outdir / f.name)
-    return [round(float(x), 3) for x in g]
+    return {"pantalla": [round(float(x), 3) for x in gf], "trasera": [round(float(x), 3) for x in gb]}
 
 
 def codificar(frames_dir: Path, base: Path, ancho: int, alto: int) -> None:
@@ -102,7 +120,8 @@ def registrar(modelos: dict, modelo: str, info: dict | None = None) -> bool:
         "cuadros": meta.get("cuadros"),
         "duracion_s": round(meta["cuadros"] / FPS, 2) if meta.get("cuadros") else None,
         "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; "
-                  "color calibrado contra la foto oficial de la Apple Store",
+                  "color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera "
+                  "contra la foto oficial de la Apple Store",
         "url_modelo_3d": AR.format(src),
         "calibrado_contra": STORE.format(ref),
         "balance_rgb": (info or {}).get("balance_rgb", prev_info.get("balance_rgb")),
@@ -152,9 +171,11 @@ def main() -> int:
             subprocess.run([blender_py, str(Path(__file__).parent / "anim_media_vuelta.py"), "--", str(usdz), str(crudo),
                             str(args.ancho), str(args.alto), str(args.cuadros), str(args.muestras)],
                            env=env, check=True, capture_output=True)
-            fw, fh = Image.open(ruta_vista(modelo, "frontal")).size
+            frontal_im = Image.open(ruta_vista(modelo, "frontal"))
+            fw, fh = frontal_im.size
+            frontal = np.asarray(frontal_im.convert("RGBA")).astype(float) / 255
             ref = np.asarray(Image.open(ref_p).convert("RGBA")).astype(float) / 255
-            g = calibrar_y_aplicar(sorted(crudo.glob("*.png")), ref, fw / fh, final)
+            g = calibrar_y_aplicar(sorted(crudo.glob("*.png")), ref, frontal, fw / fh, final)
             codificar(final, base, args.ancho, args.alto)
             registrar(modelos, modelo, {"balance_rgb": g})
             print(f"✓ {modelo}: {base.name}.mov / .webm / _preview.mp4")
