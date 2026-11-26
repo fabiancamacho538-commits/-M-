@@ -2,7 +2,7 @@
   "biblioteca": "RECURSOS/IPHONES",
   "estructura": "RECURSOS/IPHONES/<Modelo>/<Modelo>_trasera.png y <Modelo>_frontal.png (PNG RGBA con transparencia real; una carpeta por modelo)",
   "vista_por_defecto": "trasera",
-  "generado": "2026-11-26T20:18:07+00:00",
+  "generado": "2026-11-26T20:33:31+00:00",
   "scripts": {
     "frontales": "RECURSOS/_scripts/descargar_iphones.py",
     "traseras": "RECURSOS/_scripts/traseras_iphones.py",
@@ -3553,7 +3553,31 @@
         "Silver"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone19%2C2.json",
-      "modelo_confirmado_por_appledb": "iPhone 18 Pro"
+      "modelo_confirmado_por_appledb": "iPhone 18 Pro",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/ar/iphone-18-pro-e-sim.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-max-finish-select-burgundy-202609?scl=1&fmt=png-alpha",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          },
+          "animacion_del_gemelo": "iPhone 18 Pro Max",
+          "nota": "iPhone 18 Pro y iPhone 18 Pro Max tienen el mismo diseño (sólo cambia el tamaño): se usa la animación del iPhone 18 Pro Max."
+        }
+      }
     },
     {
       "modelo": "iPhone 18 Pro Max",
@@ -3663,7 +3687,29 @@
         "Silver"
       ],
       "url_verificacion_modelo": "https://raw.githubusercontent.com/littlebyteorg/appledb/main/deviceFiles/iPhone/iPhone19%2C3.json",
-      "modelo_confirmado_por_appledb": "iPhone 18 Pro Max (US)"
+      "modelo_confirmado_por_appledb": "iPhone 18 Pro Max (US)",
+      "animaciones": {
+        "media_vuelta": {
+          "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera (entrada y salida suaves). Fondo transparente.",
+          "mov_prores4444_alfa": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_media_vuelta.mov",
+          "webm_vp9_alfa": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_media_vuelta.webm",
+          "preview_mp4": "RECURSOS/IPHONES/iPhone_18_Pro_Max/iPhone_18_Pro_Max_media_vuelta_preview.mp4",
+          "resolucion": "1080x1920",
+          "fps": 30,
+          "cuadros": 49,
+          "duracion_s": 1.63,
+          "metodo": "Render Blender Cycles del modelo 3D oficial de Apple (AR Quick Look), cámara 85 mm; color calibrado en los dos extremos: pantalla contra la imagen frontal oficial y trasera contra la foto oficial de la Apple Store",
+          "url_modelo_3d": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/ar/iphone-18-pro-e-sim.usdz",
+          "calibrado_contra": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-max-finish-select-burgundy-202609?scl=1&fmt=png-alpha",
+          "balance_rgb": null,
+          "licencia": {
+            "titular_derechos": "Apple Inc.",
+            "tipo": "Derivado de material oficial de Apple (no es una licencia libre).",
+            "uso_previsto_permitido": "Uso nominativo/editorial: identificar el modelo en reseñas, comparativas, noticias, tutoriales y contenido informativo, sin sugerir patrocinio o aval de Apple.",
+            "precaucion": "Es un recorte o un render de material © Apple. Para publicidad paga o piezas comerciales con el iPhone como protagonista, revisar las 'Guidelines for Using Apple Trademarks and Copyrights' o usar fotos propias."
+          }
+        }
+      }
     },
     {
       "modelo": "iPhone Duo",
