@@ -6,7 +6,7 @@ Se ejecuta con el Python de Blender (módulo bpy):
     blenv/bin/python anim_media_vuelta.py -- modelo.usdz carpeta_frames/ [ancho alto frames muestras]
 
 Variables de entorno: EXPO (exposición en stops), HIDE (mallas a ocultar, separadas por coma),
-FRAME (renderiza sólo ese cuadro, para pruebas), GIRO (grados, por defecto 180), INCL (inclinación
+KEEP (en archivos con dos equipos, el objeto raíz del que se anima), FRAME (sólo ese cuadro, para pruebas), GIRO (grados, por defecto 180), INCL (inclinación
 de cámara en grados, por defecto 4).
 """
 import sys, os, math
@@ -40,6 +40,12 @@ for o in allm:  # cajas/planos auxiliares de AR
 for o in allm:
     if o.name in os.environ.get('HIDE', '').split(','):
         o.hide_render = True
+keep = os.environ.get('KEEP')  # archivos con dos equipos (p. ej. 17 Pro + 17 Pro Max): deja sólo uno
+if keep:
+    dentro = set(bpy.data.objects[keep].children_recursive) | {bpy.data.objects[keep]}
+    for o in allm:
+        if o not in dentro:
+            o.hide_render = True
 seen = {}
 for o in allm:  # mallas duplicadas coincidentes (z-fighting)
     if o.hide_render: continue

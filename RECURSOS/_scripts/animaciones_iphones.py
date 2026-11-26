@@ -42,9 +42,22 @@ EXTRA_3D = {
 }
 
 
+# Modelos 3D oficiales que traen DOS equipos (Pro y Pro Max): se anima sólo el grupo indicado (KEEP).
+_P17 = "iphone-17-pro/2025/704d4474-8e63-4ce7-9917-bb47b1ca4ba0/ar/iphone-17-pro-e-sim.usdz"
+_P18 = "iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/ar/iphone-18-pro-e-sim.usdz"
+DOBLES_3D = {
+    "iPhone 17 Pro":     (_P17, "iphone-17-pro-finish-select-cosmicorange-202509", "", "RQNEPvSqUMnJxkk"),
+    "iPhone 17 Pro Max": (_P17, "iphone-17-pro-max-finish-select-cosmicorange-202509", "", "jqrLJsSCRSFSMip"),
+    "iPhone 18 Pro":     (_P18, "iphone-18-pro-finish-select-burgundy-202609", "", "UBGArkKGrAMRRnj"),
+    "iPhone 18 Pro Max": (_P18, "iphone-18-pro-max-finish-select-burgundy-202609", "", "wUOhcMgiBmCgGaw"),
+}
+
+
 def fuentes_3d() -> dict:
-    d = {m: (src, ref, hide) for m, (met, src, ref, hide) in TRASERAS.items() if met == "3d"}
-    d.update(EXTRA_3D)
+    """modelo -> (usdz, referencia de color, mallas a ocultar, grupo a conservar)"""
+    d = {m: (src, ref, hide, "") for m, (met, src, ref, hide) in TRASERAS.items() if met == "3d"}
+    d.update({m: (*v, "") for m, v in EXTRA_3D.items()})
+    d.update(DOBLES_3D)
     return d
 
 
@@ -108,7 +121,7 @@ def registrar(modelos: dict, modelo: str, info: dict | None = None) -> bool:
     except Exception:  # noqa: BLE001
         pass
     prev_info = modelos.get(modelo, {}).get("animaciones", {}).get("media_vuelta", {})
-    src, ref, _ = fuentes_3d()[modelo]
+    src, ref, _, _ = fuentes_3d()[modelo]
     entrada = {
         "descripcion": "Media vuelta 3D: arranca mostrando la pantalla y gira 180° hasta la trasera "
                        "(entrada y salida suaves). Fondo transparente.",
@@ -158,7 +171,7 @@ def main() -> int:
                 continue
             if not blender_py:
                 print(f"✗ {modelo}: falta BLENDER_PY", file=sys.stderr); continue
-            src, ref_name, hide = fuentes[modelo]
+            src, ref_name, hide, keep = fuentes[modelo]
             usdz = cache / Path(src).name
             if not usdz.exists():
                 usdz.write_bytes(descargar(AR.format(src)))
@@ -167,7 +180,7 @@ def main() -> int:
                 ref_p.write_bytes(descargar(STORE.format(ref_name)))
             ev = float(evs.get(slug(modelo), 0.0)) - 0.3
             crudo, final = cache / f"{slug(modelo)}_anim", cache / f"{slug(modelo)}_anim_c"
-            env = dict(os.environ, EXPO=str(ev), HIDE=hide)
+            env = dict(os.environ, EXPO=str(ev), HIDE=hide, KEEP=keep)
             subprocess.run([blender_py, str(Path(__file__).parent / "anim_media_vuelta.py"), "--", str(usdz), str(crudo),
                             str(args.ancho), str(args.alto), str(args.cuadros), str(args.muestras)],
                            env=env, check=True, capture_output=True)
