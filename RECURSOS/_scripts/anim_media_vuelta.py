@@ -6,7 +6,7 @@ Se ejecuta con el Python de Blender (módulo bpy):
     blenv/bin/python anim_media_vuelta.py -- modelo.usdz carpeta_frames/ [ancho alto frames muestras]
 
 Variables de entorno: EXPO (exposición en stops), HIDE (mallas a ocultar, separadas por coma),
-KEEP (en archivos con dos equipos, el objeto raíz del que se anima), TEX_DIR (PNG de las texturas HEIC),
+KEEP (en archivos con dos equipos, el objeto raíz del que se anima), EXTRA_USD (geometría adicional, p. ej. una funda), TEX_DIR (PNG de las texturas HEIC),
 INVERTIR (invierte la detección pantalla/trasera), FRAME (sólo ese cuadro, para pruebas), GIRO (grados, por defecto 180), INCL (inclinación
 de cámara en grados, por defecto 4).
 """
@@ -25,6 +25,11 @@ os.makedirs(outdir, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.wm.usd_import(filepath=src)
 sc = bpy.context.scene
+extra_objs = set()
+if os.environ.get('EXTRA_USD'):  # p. ej. una funda construida alrededor del equipo
+    antes = set(sc.objects)
+    bpy.ops.wm.usd_import(filepath=os.environ['EXTRA_USD'])
+    extra_objs = set(sc.objects) - antes
 # algunos modelos AR traen animación propia (Transform Cache / Mesh Sequence Cache): se congela
 sc.frame_set(0)
 bpy.context.view_layer.update()
@@ -60,7 +65,7 @@ big = [o for o in allm if len(o.data.vertices) > 200]
 ref_h = max(max(o.dimensions) for o in big)
 for o in allm:  # cajas/planos auxiliares de AR (más grandes que el equipo, o volúmenes no planos)
     d = sorted(o.dimensions)
-    if (len(o.data.vertices) <= 64 and d[2] > ref_h * 1.05) or d[0] > ref_h * 0.3:
+    if (len(o.data.vertices) <= 64 and d[2] > ref_h * 1.05) or (len(o.data.vertices) <= 200 and d[0] > ref_h * 0.3):
         o.hide_render = True
 # texturas HEIC (Blender no las lee): usar las versiones PNG convertidas en TEX_DIR
 tex_dir = os.environ.get('TEX_DIR')
@@ -83,7 +88,7 @@ for o in allm:
         o.hide_render = True
 keep = os.environ.get('KEEP')  # archivos con dos equipos (p. ej. 17 Pro + 17 Pro Max): deja sólo uno
 if keep:
-    dentro = set(bpy.data.objects[keep].children_recursive) | {bpy.data.objects[keep]}
+    dentro = set(bpy.data.objects[keep].children_recursive) | {bpy.data.objects[keep]} | extra_objs
     for o in allm:
         if o not in dentro:
             o.hide_render = True
@@ -103,6 +108,8 @@ mn, mx = V.min(0), V.max(0); ctr = (mn + mx) / 2; ext = mx - mn
 z0, Hh = mn[2], ext[2]
 mid = V[(V[:, 2] > z0 + 0.30 * Hh) & (V[:, 2] < z0 + 0.60 * Hh)]
 top = V[V[:, 2] > z0 + 0.72 * Hh]
+if len(mid) == 0: mid = V  # modelos simples sin vértices a media altura
+if len(top) == 0: top = V
 ax = 0 if ext[0] < ext[1] else 1
 b0, b1 = np.percentile(mid[:, ax], 0.5), np.percentile(mid[:, ax], 99.5)
 back_neg = (b0 - top[:, ax].min()) > (top[:, ax].max() - b1)
