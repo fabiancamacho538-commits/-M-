@@ -1,6 +1,6 @@
 {
   "biblioteca": "RECURSOS/ACCESORIOS",
-  "generado": "2026-11-28T17:03:58+00:00",
+  "generado": "2026-11-28T17:08:28+00:00",
   "script": "RECURSOS/_scripts/accesorios.py",
   "accesorios": [
     {
@@ -67,6 +67,79 @@
         "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta.mov",
         "webm_vp9_alfa": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta.webm",
         "preview_mp4": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta_preview.mp4",
+        "resolucion": "1080x1920",
+        "cuadros": 49,
+        "fps": 30,
+        "duracion_s": 1.63
+      }
+    },
+    {
+      "accesorio": "Cargador Apple 20W USB-C (MWVV3AM/A)",
+      "clave": "Cargador_20W_USB-C",
+      "carpeta": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C",
+      "alias": [
+        "cargador 20w",
+        "cargador de 20w",
+        "cargador usb-c",
+        "cubo",
+        "cargador del iphone",
+        "cargador"
+      ],
+      "metodo_3d": "Modelo 3D hecho a medida con Blender (Apple no publica modelo 3D): 42,5 x 42,3 x 27,4 mm, patas tipo A y puerto USB-C, proporciones medidas en las fotos oficiales MWVV3, _AV1 y _AV2",
+      "fuente_3d": "RECURSOS/_scripts/modelos_accesorios.py (cargador_20w)",
+      "licencia": {
+        "titular_derechos": "Apple Inc. (productos, fotos y modelos 3D oficiales)",
+        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el producto en reseñas, comparativas, tutoriales y contenido de venta de productos Apple, sin sugerir patrocinio de Apple.",
+        "precaucion": "Los modelos a medida (cargadores y funda) son recreaciones 3D del producto real. Para publicidad paga con el producto como protagonista, revisar las pautas de marca de Apple."
+      },
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_frontal.png",
+          "resolucion": "801x1103",
+          "descripcion": "Cara ancha con las patas arriba",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 24.46,
+            "pct_opaco": 74.97,
+            "pct_semitransparente": 0.57,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "trasera": {
+          "ruta": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_trasera.png",
+          "resolucion": "801x1103",
+          "descripcion": "Cara opuesta",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 24.46,
+            "pct_opaco": 74.97,
+            "pct_semitransparente": 0.57,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "oficial": {
+          "ruta": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_oficial.png",
+          "resolucion": "2719x4150",
+          "descripcion": "Foto oficial de la Apple Store",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 22.73,
+            "pct_opaco": 73.28,
+            "pct_semitransparente": 3.99,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWVV3?scl=1&fmt=png-alpha"
+        }
+      },
+      "animacion_media_vuelta": {
+        "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_media_vuelta.mov",
+        "webm_vp9_alfa": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_media_vuelta.webm",
+        "preview_mp4": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_media_vuelta_preview.mp4",
         "resolucion": "1080x1920",
         "cuadros": 49,
         "fps": 30,
