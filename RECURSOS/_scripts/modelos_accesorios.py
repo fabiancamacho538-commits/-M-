@@ -12,7 +12,7 @@ Medidas (mm):
     agujero de 3 mm a 4 mm de la punta y puntas redondeadas (foto MWVV3); tapa superior apenas elevada;
     puerto USB-C de 8,4 x 2,6 en la cara opuesta.
   Cargador MagSafe (MGD74LL/A): disco de 55,9 de diámetro y 5,6 de espesor; aro de aluminio satinado de
-    0,12 R, surco oscuro de 0,01 R y frente blanco (perfil medido en la foto MGD74); dorso de aluminio;
+    0,12 R, surco oscuro de 0,01 R y frente blanco (perfil medido en la foto MGD74); dorso de aluminio arenado gris mate que cubre todo el disco (foto MGD74_AV1);
     cable blanco de 3,5 de diámetro y conector USB-C (fotos MGD74, _AV2, _AV3).
 
 Animación: anim_media_vuelta.py con INCL=12 (20W: FILL 0.55, EXPO 0.65; MagSafe: INVERTIR=1, FILL 0.85,
@@ -133,7 +133,8 @@ def cargador_20w():
 def cargador_magsafe():
     blanco = material('frente_blanco', (0.93, 0.93, 0.925), rough=0.45, coat=0.15)
     alu = material('aluminio', (0.91, 0.91, 0.92), rough=0.7, metal=1.0)  # aro satinado claro (foto MGD74)
-    alu_mate = material('aluminio_dorso', (0.80, 0.80, 0.81), rough=0.78, metal=0.9)
+    alu_mate = material('aluminio_dorso', (0.74, 0.74, 0.76), rough=0.9, metal=0.0)  # arenado: gris plano y mate (foto MGD74_AV1)
+    alu_mate.node_tree.nodes['Principled BSDF'].inputs['Specular IOR Level'].default_value = 0.15
     cable_m = material('cable', (0.94, 0.94, 0.935), rough=0.65)
     negro = material('puerto_interior', (0.02, 0.02, 0.022), rough=0.6)
     R, T = 55.9 / 2, 5.6
@@ -156,10 +157,10 @@ def cargador_magsafe():
     fr = bpy.context.active_object; fr.name = 'frente'
     mod = fr.modifiers.new('b', 'BEVEL'); mod.width = 0.35 * MM; mod.segments = 4
     bpy.ops.object.modifier_apply(modifier=mod.name); bpy.ops.object.shade_smooth(); asignar(fr, blanco)
-    # dorso de aluminio mate
-    bpy.ops.mesh.primitive_cylinder_add(vertices=128, radius=(R - 3.0) * MM, depth=0.4 * MM,
+    # dorso de aluminio arenado: cubre todo el disco hasta el borde redondeado del aro
+    bpy.ops.mesh.primitive_cylinder_add(vertices=128, radius=(R - 1.6) * MM, depth=0.4 * MM,
                                         location=(0, (T / 2 - 0.1) * MM, zc * MM), rotation=(math.radians(90), 0, 0))
-    do = bpy.context.active_object; do.name = 'dorso'; bpy.ops.object.shade_smooth(); asignar(do, alu_mate)
+    do = bpy.context.active_object; do.name = 'dorso'; asignar(do, alu_mate)  # sombreado plano: suavizado parecía una cúpula
     # alivio de tensión + cable hacia abajo + conector USB-C
     bpy.ops.mesh.primitive_cylinder_add(vertices=48, radius=2.4 * MM, depth=9 * MM, location=(0, 0, (zc - R - 3.5) * MM))
     al = bpy.context.active_object; al.name = 'alivio'; bpy.ops.object.shade_smooth(); asignar(al, cable_m)
