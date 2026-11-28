@@ -1,0 +1,77 @@
+{
+  "biblioteca": "RECURSOS/ACCESORIOS",
+  "generado": "2026-11-28T16:22:08+00:00",
+  "script": "RECURSOS/_scripts/accesorios.py",
+  "accesorios": [
+    {
+      "accesorio": "AirPods Pro 3",
+      "clave": "AirPods_Pro_3",
+      "carpeta": "RECURSOS/ACCESORIOS/AirPods_Pro_3",
+      "alias": [
+        "airpods pro",
+        "airpods pro 3",
+        "airpods"
+      ],
+      "metodo_3d": "Modelo 3D oficial de Apple (AR Quick Look): estuche abierto con los auriculares",
+      "fuente_3d": "https://www.apple.com/105/media/us/airpods-pro/2025/7acffb13-4adb-40b1-9393-8f1c99bc6c90/ar/airpods-pro.usdz",
+      "licencia": {
+        "titular_derechos": "Apple Inc. (productos, fotos y modelos 3D oficiales)",
+        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el producto en reseñas, comparativas, tutoriales y contenido de venta de productos Apple, sin sugerir patrocinio de Apple.",
+        "precaucion": "Los modelos a medida (cargadores y funda) son recreaciones 3D del producto real. Para publicidad paga con el producto como protagonista, revisar las pautas de marca de Apple."
+      },
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_frontal.png",
+          "resolucion": "976x1176",
+          "descripcion": "Frente del estuche abierto (LED) con los auriculares",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 21.34,
+            "pct_opaco": 78.03,
+            "pct_semitransparente": 0.63,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "trasera": {
+          "ruta": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_trasera.png",
+          "resolucion": "990x1156",
+          "descripcion": "Dorso del estuche con la tapa",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 22.94,
+            "pct_opaco": 76.46,
+            "pct_semitransparente": 0.6,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "oficial": {
+          "ruta": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_oficial.png",
+          "resolucion": "689x755",
+          "descripcion": "Foto oficial de la Apple Store",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 22.89,
+            "pct_opaco": 76.14,
+            "pct_semitransparente": 0.97,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-3-hero-select-202509?scl=1&fmt=png-alpha"
+        }
+      },
+      "animacion_media_vuelta": {
+        "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta.mov",
+        "webm_vp9_alfa": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta.webm",
+        "preview_mp4": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta_preview.mp4",
+        "resolucion": "1080x1920",
+        "cuadros": 49,
+        "fps": 30,
+        "duracion_s": 1.63
+      }
+    }
+  ]
+}

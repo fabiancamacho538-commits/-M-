@@ -11,7 +11,8 @@ Las animaciones se generan con anim_media_vuelta.py (Blender):
   Cargadores 20W y MagSafe . modelos 3D a medida (modelos_accesorios.py), proporciones de las fotos oficiales
   Funda de silicona ........ funda a medida (funda_silicona.py) sobre el modelo 3D oficial del iPhone 18 Pro Max
 
-uso: python3 RECURSOS/_scripts/accesorios.py --cuadros DIR   (DIR/<Accesorio>[_c]/0000.png ... 0048.png)
+uso: python3 RECURSOS/_scripts/accesorios.py --cuadros DIR [--solo Clave ...]
+     (DIR/<Accesorio>[_c]/0000.png ... 0048.png; sin --cuadros sólo rehace catálogo e índice)
 """
 import argparse, datetime as dt, json, subprocess, sys
 from pathlib import Path
@@ -85,10 +86,18 @@ def info_video(p):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cuadros", help="carpeta con los cuadros renderizados (para las imágenes fijas)")
+    ap.add_argument("--solo", nargs="*", help="actualizar sólo estos accesorios (el catálogo conserva los demás)")
     args = ap.parse_args()
+    previo = {}
+    if (DEST / "catalogo.json").exists():
+        previo = {e["clave"]: e for e in json.loads((DEST / "catalogo.json").read_text())["accesorios"]}
     cat = []
     for clave, a in ACCESORIOS.items():
         d = DEST / clave; d.mkdir(parents=True, exist_ok=True)
+        if args.solo and clave not in args.solo:
+            if clave in previo:
+                cat.append(previo[clave])
+            continue
         e = {"accesorio": a["nombre"], "clave": clave, "carpeta": f"RECURSOS/ACCESORIOS/{clave}", "alias": a["alias"],
              "metodo_3d": a["metodo_3d"], "fuente_3d": a["fuente_3d"], "licencia": LICENCIA, "imagenes": {}}
         if args.cuadros:
