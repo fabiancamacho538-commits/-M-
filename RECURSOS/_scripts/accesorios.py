@@ -75,6 +75,17 @@ def recortar(im, m=6):
     return im.crop((max(0, bb[0] - m), max(0, bb[1] - m), min(im.width, bb[2] + m), min(im.height, bb[3] + m)))
 
 
+def quitar_linea_piso(im):
+    """Algunas fotos oficiales (MGD74) traen una línea de "piso" fina a todo el ancho abajo: se borra."""
+    import numpy as np
+    a = np.asarray(im).copy(); al = a[..., 3] > 16; H, W = al.shape
+    filas = [y for y in range(int(H * 0.9), H) if al[y].mean() > 0.5]
+    if filas and len(filas) <= 16:
+        a[min(filas) - 2:max(filas) + 3, :, 3] = 0
+        print("  línea de piso borrada en las filas", min(filas), "-", max(filas))
+    return Image.fromarray(a, "RGBA")
+
+
 def info_video(p):
     r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames", "-show_entries",
                         "stream=width,height,nb_read_frames", "-of", "json", str(p)], capture_output=True, text=True)
@@ -108,7 +119,8 @@ def main():
                     guardar_png(recortar(Image.open(fr / f"{n}.png").convert("RGBA")), d / f"{clave}_{vista}.png")
         of = d / f"{clave}_oficial.png"
         if not of.exists():
-            guardar_png(recortar(Image.open(__import__("io").BytesIO(descargar(STORE.format(a["oficial"])))).convert("RGBA")), of)
+            im = Image.open(__import__("io").BytesIO(descargar(STORE.format(a["oficial"])))).convert("RGBA")
+            guardar_png(recortar(quitar_linea_piso(recortar(im))), of)
         for vista in ("frontal", "trasera", "oficial"):
             p = d / f"{clave}_{vista}.png"
             if p.exists():

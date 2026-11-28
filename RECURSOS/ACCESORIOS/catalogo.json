@@ -1,6 +1,6 @@
 {
   "biblioteca": "RECURSOS/ACCESORIOS",
-  "generado": "2026-11-28T17:08:28+00:00",
+  "generado": "2026-11-28T17:26:27+00:00",
   "script": "RECURSOS/_scripts/accesorios.py",
   "accesorios": [
     {
@@ -140,6 +140,77 @@
         "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_media_vuelta.mov",
         "webm_vp9_alfa": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_media_vuelta.webm",
         "preview_mp4": "RECURSOS/ACCESORIOS/Cargador_20W_USB-C/Cargador_20W_USB-C_media_vuelta_preview.mp4",
+        "resolucion": "1080x1920",
+        "cuadros": 49,
+        "fps": 30,
+        "duracion_s": 1.63
+      }
+    },
+    {
+      "accesorio": "Cargador MagSafe de Apple (MGD74LL/A)",
+      "clave": "Cargador_MagSafe",
+      "carpeta": "RECURSOS/ACCESORIOS/Cargador_MagSafe",
+      "alias": [
+        "magsafe",
+        "cargador magsafe",
+        "cargador inalámbrico",
+        "cargador inalambrico"
+      ],
+      "metodo_3d": "Modelo 3D hecho a medida con Blender (Apple no publica modelo 3D): disco de 55,9 mm con aro de aluminio, cable y conector USB-C, según las fotos oficiales MGD74, _AV2 y _AV3",
+      "fuente_3d": "RECURSOS/_scripts/modelos_accesorios.py (cargador_magsafe)",
+      "licencia": {
+        "titular_derechos": "Apple Inc. (productos, fotos y modelos 3D oficiales)",
+        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el producto en reseñas, comparativas, tutoriales y contenido de venta de productos Apple, sin sugerir patrocinio de Apple.",
+        "precaucion": "Los modelos a medida (cargadores y funda) son recreaciones 3D del producto real. Para publicidad paga con el producto como protagonista, revisar las pautas de marca de Apple."
+      },
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/ACCESORIOS/Cargador_MagSafe/Cargador_MagSafe_frontal.png",
+          "resolucion": "530x1614",
+          "descripcion": "Cara blanca de carga",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 69.88,
+            "pct_opaco": 29.54,
+            "pct_semitransparente": 0.58,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "trasera": {
+          "ruta": "RECURSOS/ACCESORIOS/Cargador_MagSafe/Cargador_MagSafe_trasera.png",
+          "resolucion": "530x1614",
+          "descripcion": "Dorso de aluminio",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 69.88,
+            "pct_opaco": 29.54,
+            "pct_semitransparente": 0.58,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "oficial": {
+          "ruta": "RECURSOS/ACCESORIOS/Cargador_MagSafe/Cargador_MagSafe_oficial.png",
+          "resolucion": "997x2746",
+          "descripcion": "Foto oficial de la Apple Store",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 68.54,
+            "pct_opaco": 31.12,
+            "pct_semitransparente": 0.34,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGD74?scl=1&fmt=png-alpha"
+        }
+      },
+      "animacion_media_vuelta": {
+        "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/Cargador_MagSafe/Cargador_MagSafe_media_vuelta.mov",
+        "webm_vp9_alfa": "RECURSOS/ACCESORIOS/Cargador_MagSafe/Cargador_MagSafe_media_vuelta.webm",
+        "preview_mp4": "RECURSOS/ACCESORIOS/Cargador_MagSafe/Cargador_MagSafe_media_vuelta_preview.mp4",
         "resolucion": "1080x1920",
         "cuadros": 49,
         "fps": 30,

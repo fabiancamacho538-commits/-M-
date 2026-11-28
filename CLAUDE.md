@@ -36,7 +36,9 @@ RECURSOS/
     ├── render_trasera_usdz.py   # render de la trasera desde el modelo 3D (USDZ) de Apple con Blender
     ├── accesorios.py            # accesorios: imágenes fijas, foto oficial, catalogo.json e índice
     ├── modelos_accesorios.py    # modelos 3D a medida de los cargadores 20W y MagSafe (Blender)
-    └── funda_silicona.py        # funda de silicona construida sobre el modelo 3D oficial del iPhone
+    ├── blanco_neutro.py         # quita el tinte de la iluminación en accesorios blancos (cargadores)
+    ├── funda_silicona.py        # funda de silicona construida sobre el modelo 3D oficial del iPhone
+    └── funda_post.py            # calibra el color de la funda (silicona, pantalla, meseta) contra la foto oficial
 ```
 
 Todas las imágenes son PNG RGBA con transparencia real, recortadas al contorno del equipo.
