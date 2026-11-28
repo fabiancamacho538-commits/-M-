@@ -18,6 +18,14 @@ RECURSOS/
 │   ├── iPhone_11_Pro/ … iPhone_18_Pro_Max/   # una carpeta por modelo, mismo esquema
 │   ├── catalogo.json                 # fuente de verdad: modelo, rutas, resolución, URL, licencia
 │   └── _indice_visual.jpg            # hoja de contacto (trasera + frontal de cada modelo)
+├── ACCESORIOS/                       # AirPods, cargadores y fundas (ver "Accesorios" más abajo)
+│   ├── AirPods_Pro_3/
+│   │   ├── AirPods_Pro_3_media_vuelta.mov / .webm / _preview.mp4   # giro 3D, mismo formato que los iPhone
+│   │   ├── AirPods_Pro_3_frontal.png / _trasera.png               # primer y último cuadro del giro
+│   │   └── AirPods_Pro_3_oficial.png                              # foto oficial de la Apple Store
+│   ├── Cargador_20W_USB-C/ · Cargador_MagSafe/ · Funda_Silicona_iPhone_18_Pro_Max_Magenta/
+│   ├── catalogo.json
+│   └── _indice_visual.jpg
 └── _scripts/
     ├── buscar_iphone.py         # detecta modelos de iPhone en un texto y devuelve su PNG
     ├── descargar_iphones.py     # frontales: descarga, verifica (AppleDB + Pillow), optimiza
@@ -25,7 +33,10 @@ RECURSOS/
     ├── animaciones_iphones.py   # animación 3D media vuelta (pantalla → trasera) con Blender
     ├── anim_media_vuelta.py     # escena de Blender de la media vuelta (la usa el script anterior)
     ├── extraer_trasera.py       # separa la trasera de una composición oficial trasera+frente
-    └── render_trasera_usdz.py   # render de la trasera desde el modelo 3D (USDZ) de Apple con Blender
+    ├── render_trasera_usdz.py   # render de la trasera desde el modelo 3D (USDZ) de Apple con Blender
+    ├── accesorios.py            # accesorios: imágenes fijas, foto oficial, catalogo.json e índice
+    ├── modelos_accesorios.py    # modelos 3D a medida de los cargadores 20W y MagSafe (Blender)
+    └── funda_silicona.py        # funda de silicona construida sobre el modelo 3D oficial del iPhone
 ```
 
 Todas las imágenes son PNG RGBA con transparencia real, recortadas al contorno del equipo.
@@ -90,6 +101,27 @@ cuando el guion, la transcripción, los subtítulos o el pedido mencionen un mod
   ```
 - **HTML / GSAP / Remotion / HyperFrames:** referenciar el PNG por su ruta relativa y animar con
   `transform`, sin rasterizar de nuevo la imagen.
+
+### Accesorios (AirPods, cargador, funda)
+
+Cuando el guion o el pedido mencionen AirPods, el cargador o la funda, usá `RECURSOS/ACCESORIOS/`
+(los alias por accesorio están en `catalogo.json`):
+
+| Mención | Carpeta | Origen del 3D |
+|---|---|---|
+| AirPods Pro / AirPods | `AirPods_Pro_3` | modelo 3D oficial de Apple (AR Quick Look) |
+| cargador, cubo, 20W, USB-C | `Cargador_20W_USB-C` | modelado a medida con las proporciones de las fotos oficiales |
+| MagSafe, cargador inalámbrico | `Cargador_MagSafe` | modelado a medida con las proporciones de las fotos oficiales |
+| funda, case | `Funda_Silicona_iPhone_18_Pro_Max_Magenta` | funda a medida sobre el iPhone 18 Pro Max oficial |
+
+- Las animaciones `_media_vuelta` tienen el mismo formato que las de los iPhone (1,6 s, 48 cuadros a 30 fps,
+  1080×1920, `.mov` ProRes 4444 o `.webm` VP9 con alfa) y se usan igual: congelar el último cuadro o invertir.
+- `_frontal.png`/`_trasera.png` son el primer y el último cuadro del giro (render 3D); `_oficial.png` es la
+  foto de producto de la Apple Store: usala cuando el plano pida la imagen "de catálogo".
+- La funda es Magenta para el 18 Pro Max: no la uses para otro modelo ni otro color. Si piden otra funda,
+  generala con `funda_silicona.py` sobre el USDZ de ese modelo (ver el docstring) o avisá que falta.
+- Los cargadores y la funda son recreaciones 3D (Apple no publica esos modelos): en anuncios pagos donde el
+  accesorio sea protagonista, preferí `_oficial.png` o fotos propias.
 
 ### Licencia (leer antes de usar en anuncios)
 
