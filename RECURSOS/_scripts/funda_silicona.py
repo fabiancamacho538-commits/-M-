@@ -2,7 +2,8 @@
 Funda de silicona puesta sobre el modelo 3D oficial del iPhone (USDZ de AR Quick Look de Apple).
 La carcasa se construye alrededor del contorno medido del equipo: pared de 1,3 mm, borde que abraza
 la pantalla, recorte de la meseta de cámaras y logo de Apple tomado de la foto oficial de la funda.
-Exporta un .usdc sólo con la funda; anim_media_vuelta.py la carga sobre el USDZ oficial con EXTRA_USD.
+Exporta un .usdc sólo con la funda; anim_media_vuelta.py la carga sobre el USDZ oficial con EXTRA_USD
+(KEEP=<grupo> EXTRA_USD=funda.usdc FILL=0.78 EXPO=0.3) y funda_post.py calibra el color contra la foto oficial.
 
     blenv/bin/python funda_silicona.py -- iphone.usdz GRUPO_KEEP "R G B" logo_mask.png salida.usdc
       GRUPO_KEEP: objeto raíz del equipo en archivos con dos teléfonos ('-' si hay uno solo)

@@ -1,6 +1,6 @@
 {
   "biblioteca": "RECURSOS/ACCESORIOS",
-  "generado": "2026-11-28T16:22:08+00:00",
+  "generado": "2026-11-28T17:03:58+00:00",
   "script": "RECURSOS/_scripts/accesorios.py",
   "accesorios": [
     {
@@ -67,6 +67,78 @@
         "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta.mov",
         "webm_vp9_alfa": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta.webm",
         "preview_mp4": "RECURSOS/ACCESORIOS/AirPods_Pro_3/AirPods_Pro_3_media_vuelta_preview.mp4",
+        "resolucion": "1080x1920",
+        "cuadros": 49,
+        "fps": 30,
+        "duracion_s": 1.63
+      }
+    },
+    {
+      "accesorio": "Funda de silicona con MagSafe para iPhone 18 Pro Max – Magenta (MK904ZM/A)",
+      "clave": "Funda_Silicona_iPhone_18_Pro_Max_Magenta",
+      "carpeta": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta",
+      "alias": [
+        "funda",
+        "funda de silicona",
+        "case",
+        "funda magenta",
+        "funda del iphone"
+      ],
+      "metodo_3d": "Funda construida a medida (funda_silicona.py) sobre el modelo 3D oficial del iPhone 18 Pro Max: pared de 1,3 mm, borde sobre la pantalla, recorte de la meseta de cámaras; color y logo tomados de la foto oficial MK904",
+      "fuente_3d": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/ar/iphone-18-pro-e-sim.usdz + RECURSOS/_scripts/funda_silicona.py",
+      "licencia": {
+        "titular_derechos": "Apple Inc. (productos, fotos y modelos 3D oficiales)",
+        "uso_previsto_permitido": "Uso nominativo/editorial: identificar el producto en reseñas, comparativas, tutoriales y contenido de venta de productos Apple, sin sugerir patrocinio de Apple.",
+        "precaucion": "Los modelos a medida (cargadores y funda) son recreaciones 3D del producto real. Para publicidad paga con el producto como protagonista, revisar las pautas de marca de Apple."
+      },
+      "imagenes": {
+        "frontal": {
+          "ruta": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta/Funda_Silicona_iPhone_18_Pro_Max_Magenta_frontal.png",
+          "resolucion": "754x1519",
+          "descripcion": "iPhone 18 Pro Max de frente con la funda",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 4.32,
+            "pct_opaco": 95.21,
+            "pct_semitransparente": 0.46,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "trasera": {
+          "ruta": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta/Funda_Silicona_iPhone_18_Pro_Max_Magenta_trasera.png",
+          "resolucion": "751x1512",
+          "descripcion": "Dorso de la funda Magenta",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 4.4,
+            "pct_opaco": 95.12,
+            "pct_semitransparente": 0.48,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": null
+        },
+        "oficial": {
+          "ruta": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta/Funda_Silicona_iPhone_18_Pro_Max_Magenta_oficial.png",
+          "resolucion": "1816x3646",
+          "descripcion": "Foto oficial de la Apple Store",
+          "transparencia": {
+            "tiene_canal_alfa": true,
+            "pct_transparente": 3.37,
+            "pct_opaco": 96.43,
+            "pct_semitransparente": 0.2,
+            "esquinas_transparentes": true,
+            "transparencia_real": true
+          },
+          "url_original": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK904?scl=1&fmt=png-alpha"
+        }
+      },
+      "animacion_media_vuelta": {
+        "mov_prores4444_alfa": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta/Funda_Silicona_iPhone_18_Pro_Max_Magenta_media_vuelta.mov",
+        "webm_vp9_alfa": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta/Funda_Silicona_iPhone_18_Pro_Max_Magenta_media_vuelta.webm",
+        "preview_mp4": "RECURSOS/ACCESORIOS/Funda_Silicona_iPhone_18_Pro_Max_Magenta/Funda_Silicona_iPhone_18_Pro_Max_Magenta_media_vuelta_preview.mp4",
         "resolucion": "1080x1920",
         "cuadros": 49,
         "fps": 30,
